@@ -1,0 +1,91 @@
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[colors]
+bg = #1e1718
+fg = #dedfe0
+icon = #d50000
+
+[bar/topbar]
+
+monitor = HDMI-A-0
+bottom = false
+background = ${colors.bg}
+foreground = ${colors.fg}
+border-size = 1
+border-color = #CFAAA6
+enable-ipc = true
+
+padding-left = 1
+padding-right = 1
+
+width = 1080
+#width = 2550
+fixed-center = true
+height = 25 
+
+offset-x = 800
+offset-y = 5
+module-margin-left = 1
+module-margin-right = 2
+
+#font-0 = lucy tewii:size=8
+font-0 = ypn envypn:size=8
+font-1 = fontawesome:pixelsize=8
+font-2 = MaterialIcons:size=8
+font-3 = Weather Icons:size=12;1
+
+modules-left = mpd
+modules-center = date
+modules-right =   volume killx   
+
+#tray-padding = 2
+#tray-position = right
+#tray-detached = false
+#tray-maxsize = 16
+#tray-background = ${colors.bg}
+
+[module/mpd]
+type = internal/mpd
+format-online =  <label-song>
+;format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle>
+<icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress>
+<label-time>  <label-song>
+host = 127.0.0.1
+port = 6601
+label-song = %{F#CFAAA6}%{F-} %artist% - %title%
+label-song-maxlen = 100
+label-song-ellipsis = true
+
+[module/date]
+type = internal/date
+; Seconds to sleep between updates
+interval = 1.0
+
+; See "man date" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = %b %d %Y
+
+; Optional time format
+time = %I:%M%p
+
+format =  %{F#CFAAA6}%{F-} <label> 
+label = %date% %time%
+icon-date-foreground = #FF0000
+
+[module/volume]
+type = custom/script
+exec = /home/jeremy/.config/polybar/volume.sh   
+tail = true
+interval = 90
+format-prefix = %{F#CFAAA6}  %{F-}  
+format-prefix-font = 0
+format-prefix-foreground = #b7b7b6
+
+[module/killx]
+type = custom/script
+click-left = ~/.config/polybar/killx.sh
+label = " "
+format-prefix-foreground = #5b
+

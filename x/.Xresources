@@ -1,0 +1,90 @@
+!URxvt*font: xft:lucy tewii:size=8,xft:Font Awesome:size=9
+!URxvt*font: xft:hermit:size=8, xft:Font 
+URxvt*font: xft:ypn envypn:size=8, xft:Font
+URxvt*boldfont: xft:ypn envypn:size=8, xft:Font
+Awesome:size=9, xft:powerline:size=9
+!URxvt*boldFont: xft:lucy tewii:size=8
+Xft.dpi: 96
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+URxvt.scrollBar: false
+URxvt.internalBorder: 20
+URxvt*dynamicColors: on
+URxvt*lineSpace: 2
+
+! Colors 0-15.
+URxvt*foreground:   #dedfe0
+URxvt*background:   [100]#1e1718
+URxvt*cursorColor:  #dedfe0
+URxvt*borderColor:  [100]#1e1718
+
+! Colors 0-15.
+*.color0: #1e1718
+*color0:  #1e1718
+*.color1: #A69299
+*color1:  #A69299
+*.color2: #B2AEB4
+*color2:  #B2AEB4
+*.color3: #CFAAA6
+*color3:  #CFAAA6
+*.color4: #DCD1AE
+*color4:  #DCD1AE
+*.color5: #CDBCC4
+*color5:  #CDBCC4
+*.color6: #BBC0C5
+*color6:  #BBC0C5
+*.color7: #dedfe0
+*color7:  #dedfe0
+*.color8: #9b9c9c
+*color8:  #9b9c9c
+*.color9: #A69299
+*color9:  #A69299
+*.color10: #B2AEB4
+*color10:  #B2AEB4
+*.color11: #CFAAA6
+*color11:  #CFAAA6
+*.color12: #DCD1AE
+*color12:  #DCD1AE
+*.color13: #CDBCC4
+*color13:  #CDBCC4
+*.color14: #BBC0C5
+*color14:  #BBC0C5
+*.color15: #dedfe0
+*color15:  #dedfe0
+
+! Black color that will not be affected by bold highlighting.
+*.color66: #1e1718
+*color66:  #1e1718
+
+
+! 2BWM 
+twobwm.border_width: 	   10
+twobwm.outer_border: 0
+twobwm.inverted_colors:    false
+twobwm.enable_compton: true
+
+! 2BWM COLORS
+twobwm.focus_color: #CFAAA6
+twobwm.unfocus_color: #B2AEB4
+twobwm.fixed_color: #DCD1AE
+twobwm.unkill_color: #A69299
+twobwm.outer_border_color: #CDBCC4
+twobwm.fixed_unkill_color: #1E1718
+
+
+! ST Settings
+st.font:  tewii:size8
+st.termname:                    st-256color
+st.shell:                       /bin/zsh
+st.tabspaces:                   16
+st.chscale:                     1.0
+st.cwscale:                     0.2
+
+st.foreground:   #f19f79
+st.background:   #0f0202
+st.cursorColor:  #f19f79
+
