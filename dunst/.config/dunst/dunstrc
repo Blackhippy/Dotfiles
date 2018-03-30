@@ -16,25 +16,27 @@ separator_height = 0
 shrink = no
 sort = yes
 word_wrap = yes
-font = ypn envypn
+#font = ypn envypn
+#font = hermit
+font = PixelCarnageMonoTT
 ignore_newline = no
 
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#DCD1AE"
-foreground = "#dedfe0"
-background = "#1e1718"
-timeout = 4
+frame_color = "#728D9C"
+foreground = "#d0dce2"
+background = "#080B0D"
+timeout = 360
 
 [urgency_normal]
-frame_color = "#DCD1AE"
-foreground = "#dedfe0"
-background = "#1e1718"
-timeout = 6
+frame_color = "#728D9C"
+foreground = "#d0dce2"
+background = "#080B0D"
+timeout = 360
 
 [urgency_critical]
-frame_color = "#DCD1AE"
-foreground = "#dedfe0"
-background = "#1e1718"
-timeout = 8
+frame_color = "#728D9C"
+foreground = "#d0dce2"
+background = "#080B0D"
+timeout = 360

@@ -8,6 +8,6 @@ nm-applet &
 polybar topbar &
 dunst &
 pulseaudio --start &
-urxvt &
 ~/.fehbg  &
+unclutter &
 exec /usr/local/bin/2bwm

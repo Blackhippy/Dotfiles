@@ -1,3 +1,35 @@
-input {
-  width: 100%
+:root {
+    --color1: #080B0D !important;
+    --color2: #d0dce2 !important;
+    --color3: #728d9c !important;
+    --wallpaper: url('bg.jpg');
+}
+
+body {
+    background-color: var(--color1);
+    font-family: 'Source Code Pro' !important;
+}
+.menu {
+    background-color: var(--color1);
+    color: var(--color2);
+    box-shadow: .05rem solid var(--color2);
+}
+.title {
+    color: var(--color3);
+}
+.divider{
+    color: var(--color3);
+    border-bottom: 3px solid var(--color3);
+}
+.card {
+background: var(--color1);
+border: .05rem solid var(--color2);
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    width: 100%;
+    padding: 350px 0;
 }
