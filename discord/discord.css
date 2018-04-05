@@ -7,6 +7,9 @@
     --color2: #d0dce2 !important;
     --color3: #728d9c !important;
 }
+.membersWrap-3wRngy {
+  display: none;
+}
 /*hide unread channel icons*/
 .unread-23Kvxk {
     display: none;
