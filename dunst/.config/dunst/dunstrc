@@ -24,19 +24,19 @@ ignore_newline = no
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#728D9C"
-foreground = "#d0dce2"
-background = "#080B0D"
+frame_color = "#cb9c4d"
+foreground = "#ffce8f"
+background = "#16171a"
 timeout = 360
 
 [urgency_normal]
-frame_color = "#728D9C"
-foreground = "#d0dce2"
-background = "#080B0D"
+frame_color = "#cb9c4d"
+foreground = "#ffce8f"
+background = "#16171a"
 timeout = 360
 
 [urgency_critical]
-frame_color = "#728D9C"
-foreground = "#d0dce2"
-background = "#080B0D"
+frame_color = "#cb9c4d"
+foreground = "#ffce8f"
+background = "#16171a"
 timeout = 360

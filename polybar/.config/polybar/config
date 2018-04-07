@@ -4,9 +4,9 @@ margin-bottom = 5
 
 
 [colors]
-bg = #080B0D
-fg = #d0dce2
-icon = #88788B
+bg = #16171a
+fg = #ffce8f
+icon = #cb9c4d
 
 [bar/topbar]
 
@@ -15,7 +15,9 @@ bottom = false
 background = ${colors.bg}
 foreground = ${colors.fg}
 border-size = 5
-border-color = #728D9C
+border-color = ${colors.icon}
+#border-size = 5
+#border-color = #728D9C
 enable-ipc = true
 
 padding-left = 1
@@ -40,7 +42,7 @@ font-3 = Weather Icons:size=12;1
 
 modules-left = mpd
 modules-center = date
-modules-right =  screenshot re logout shutdown
+modules-right =  vpn screenshot re logout shutdown
 
 #tray-padding = 2
 #tray-position = right
@@ -56,7 +58,7 @@ format-online =  <label-song>
 <label-time>  <label-song>
 host = 127.0.0.1
 port = 6601
-label-song = %{F#594663}%{F-} %artist% - %title%
+label-song = %{F#cb9c4d}%{F-} %artist% - %title%
 label-song-maxlen = 100
 label-song-ellipsis = true
 
@@ -72,7 +74,7 @@ date = %b %d %Y
 ; Optional time format
 time = %I:%M%p
 
-format =  %{F#594663}%{F-} <label>
+format =  %{F#cb9c4d}%{F-} <label>
 label = %date% %time%
 icon-date-foreground = #FF0000
 
@@ -102,7 +104,6 @@ type = custom/text
 content = Refresh
 content-prefix = 
 content-prefix-foreground = ${colors.icon}
-
 content-foreground = ${colors.fg}
 content-background = ${colors.bg}
 content-prefix-padding = 1
@@ -128,3 +129,13 @@ content-background = ${colors.bg}
 content-prefix-padding = 1
 click-left = notify-send 'Polybar' 'Shutting down in 5 seconds' --icon=dialog-information && sleep 5 && shutdown
 
+[module/vpn]
+type= custom/text
+content = Vpn
+content-prefix = 
+content-prefix-foreground = ${colors.icon}
+content-foreground = $(colors.fg)
+content-background = $(colors.bg)
+content-prefix-padding = 1
+click-left = nmcli con up arch && notify-send 'Polybar' 'Vpn Running' --icon=dialog-information
+click-right = nmcli con down arch && notify-send 'Polybar' 'Vpn Shutting Down' --icon=dialog-information

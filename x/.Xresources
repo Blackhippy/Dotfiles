@@ -4,62 +4,55 @@ URxvt*boldfont: xft:PixelCarnageMonoTT:size=10,xft:Font Awesome:size=9
 !URxvt*font: xft:ypn envypn:size=8, xft:Font
 !URxvt*boldfont: xft:ypn envypn:size=8, xft:FontAwesome:size=9
 Xft.dpi: 96
-Xft.autohint: 0
-Xft.antialias: 1
-Xft.hinting: true
-Xft.hintstyle: hintslight
-Xft.rgba: rgb
-Xft.lcdfilter: lcddefault
+!Xft.autohint: 0
+!Xft.antialias: 1
+!Xft.hinting: true
+!Xft.hintstyle: hintslight
+!Xft.rgba: rgb
+!Xft.lcdfilter: lcddefault
 URxvt.scrollBar: false
 URxvt.internalBorder: 20
 URxvt*dynamicColors: on
 URxvt*lineSpace: 2
 URxvt.geometry: 72x16
 
-! Colors 0-15.
-URxvt*foreground:   #d0dce2
-URxvt*background:   [100]#080B0D
-URxvt*cursorColor:  #d0dce2
-URxvt*borderColor:  [100]#080B0D
+! COLORS
+! special
+*.foreground:   #ffce8f
+*.background:   #16171a
+*.cursorColor:  #ffce8f
 
-! Colors 0-15.
-*.color0: #080B0D
-*color0:  #080B0D
-*.color1: #5F7887
-*color1:  #5F7887
-*.color2: #88788B
-*color2:  #88788B
-*.color3: #728D9C
-*color3:  #728D9C
-*.color4: #8CA5B3
-*color4:  #8CA5B3
-*.color5: #9FB8C7
-*color5:  #9FB8C7
-*.color6: #C6B8CB
-*color6:  #C6B8CB
-*.color7: #d0dce2
-*color7:  #d0dce2
-*.color8: #919a9e
-*color8:  #919a9e
-*.color9: #5F7887
-*color9:  #5F7887
-*.color10: #88788B
-*color10:  #88788B
-*.color11: #728D9C
-*color11:  #728D9C
-*.color12: #8CA5B3
-*color12:  #8CA5B3
-*.color13: #9FB8C7
-*color13:  #9FB8C7
-*.color14: #C6B8CB
-*color14:  #C6B8CB
-*.color15: #d0dce2
-*color15:  #d0dce2
+! black
+*.color0:       #2d2f36
+*.color8:       #444752
 
-! Black color that will not be affected by bold highlighting.
-*.color66: #080B0D
-*color66:  #080B0D
+! red
+*.color1:       #9f6436
+*.color9:       #c4824f
 
+! green
+*.color2:       #da9832
+*.color10:      #e6b363
+
+! yellow
+*.color3:       #a97c32
+*.color11:      #cb9c4d
+
+! blue
+*.color4:       #b3792e
+*.color12:      #d3974b
+
+! magenta
+*.color5:       #b38949
+*.color13:      #c8a671
+
+! cyan
+*.color6:       #bf8946
+*.color14:      #d1a671
+
+! white
+*.color7:       #eddac4
+*.color15:      #fbf8f3
 
 ! 2BWM
 twobwm.border_width: 	   10
@@ -68,12 +61,12 @@ twobwm.inverted_colors:    false
 twobwm.enable_compton: true
 
 ! 2BWM COLORS
-twobwm.focus_color: #728D9C !color11
-twobwm.unfocus_color: #88788B !color10
-twobwm.fixed_color: #8CA5B3 !color4
-twobwm.unkill_color: #5F7887 !color1
-twobwm.outer_border_color: #080B0D !color0
-twobwm.fixed_unkill_color: #9FB8C7 !color5
+twobwm.focus_color: #cb9c4d !color11
+twobwm.unfocus_color: #e6b363 !color10
+twobwm.fixed_color: #b3792e !color4
+twobwm.unkill_color: #9f6436 !color1
+twobwm.outer_border_color: #2d2f36 !color0
+twobwm.fixed_unkill_color: #b38949 !color5
 
 
 ! ST Settings
@@ -83,7 +76,6 @@ st.shell:                       /bin/zsh
 st.tabspaces:                   16
 st.chscale:                     1.0
 st.cwscale:                     0.2
-
 st.foreground:   #f19f79
 st.background:   #0f0202
 st.cursorColor:  #f19f79

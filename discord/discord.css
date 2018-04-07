@@ -3,9 +3,13 @@
 @import "https://cdn.rawgit.com/Vap0r1ze/Discord-Nitro-Badges/master/nitro.css";
 
 :root {
-    --color1: #080B0D !important;
-    --color2: #d0dce2 !important;
-    --color3: #728d9c !important;
+    --color1: #16171a !important;
+    --color2: #ffce8f !important;
+    --color3: #cb9c4d !important;
+}
+.channels-3g2vYe{
+  font-family: monospace;
+  src: url("https://github.com/Blackhippy/Dotfiles/blob/master/fonts/.local/share/fonts/PixelCarnageMono.ttf");
 }
 .membersWrap-3wRngy {
   display: none;
@@ -314,7 +318,7 @@
 /*custom font*/
 @font-face {
   font-family: monospace;
-  src: url("https://cdn.rawgit.com/Blackhippy/HpstrDiscord/9597ff37/scientifica.ttf");
+  src: url("https://github.com/Blackhippy/Dotfiles/blob/master/fonts/.local/share/fonts/PixelCarnageMono.ttf");
 }
 .channel-members h2,
 .guild-channels span,
@@ -331,67 +335,13 @@
 code,
 .timestamp, .tooltip{
   font-family: monospace;
-  src: url("https://cdn.rawgit.com/Blackhippy/HpstrDiscord/9597ff37/scientifica.ttf");
+  src: url("https://github.com/Blackhippy/Dotfiles/blob/master/fonts/.local/share/fonts/PixelCarnageMono.ttf");
 }
 
-/*old discord toolbar*/
-:root {
-  --i-rtl-invert: 0%;
-  --i-rtl-closeimg: url(https://rawgit.com/intrnl/discordAdditions/master/revertTitlebar/assets/btn-close.svg);
-  --i-rtl-maximizeimg: url(https://rawgit.com/intrnl/discordAdditions/master/revertTitlebar/assets/btn-maximize.svg);
-  --i-rtl-minimizeimg: url(https://rawgit.com/intrnl/discordAdditions/master/revertTitlebar/assets/btn-minimize.svg); }
-
-.titleBar-3_fDwJ {
-  height: 30px;;
-  width: calc(30px * 3);
-  margin: 0;
-  padding: 9px 8px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-app-region: no-drag; }
-  .titleBar-3_fDwJ:before {
-    content: ' ';
-    display: block;
-    height: 14px;
-    width: 100vw;
-    position: absolute;
-    top: 4px;
-    right: 0;
-    z-index: 3000;
-    -webkit-app-region: drag; }
-  .titleBar-3_fDwJ .winButton-U7zAqI {
-    display: block;
-    height: 30px;
-    width: 30px;
-    position: relative;
-    top: 0;
-    background-color: transparent;
-    background-size: 26px;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: .6;
-    filter: invert(0%); }
-    .titleBar-3_fDwJ .winButton-U7zAqI:hover {
-      opacity: .8; }
-  .titleBar-3_fDwJ div:nth-of-type(2) {
-    background-image: var(--i-rtl-closeimg); }
-  .titleBar-3_fDwJ div:nth-of-type(3) {
-    background-image: var(--i-rtl-maximizeimg); }
-  .titleBar-3_fDwJ div:nth-of-type(4) {
-    background-image: var(--i-rtl-minimizeimg); }
-  .titleBar-3_fDwJ .wordmark-2L03Wr, .titleBar-3_fDwJ .winButton-U7zAqI svg {
-    display: none; }
-
-.title-qAcLxz .flex-lFgbSz.horizontal-2BEEBe, .titleCall-3X0yGQ .flex-lFgbSz.horizontal-2BEEBe, .headerBar-cxbhPD .flex-lFgbSz.horizontal-2BEEBe {
-  margin-right: 98px; }
-  .title-qAcLxz .flex-lFgbSz.horizontal-2BEEBe:after, .titleCall-3X0yGQ .flex-lFgbSz.horizontal-2BEEBe:after, .headerBar-cxbhPD .flex-lFgbSz.horizontal-2BEEBe:after {
-    content: ' ';
-    height: 22px;
-    width: 1px; }
-    .theme-dark .title-qAcLxz .flex-lFgbSz.horizontal-2BEEBe:after, .theme-dark .titleCall-3X0yGQ .flex-lFgbSz.horizontal-2BEEBe:after, .theme-dark .headerBar-cxbhPD .flex-lFgbSz.horizontal-2BEEBe:after {
-      background-color: rgba(247, 247, 248, 0.1); }
-    .theme-light .title-qAcLxz .flex-lFgbSz.horizontal-2BEEBe:after, .theme-light .titleCall-3X0yGQ .flex-lFgbSz.horizontal-2BEEBe:after, .theme-light .headerBar-cxbhPD .flex-lFgbSz.horizontal-2BEEBe:after {
-background-color: rgba(114, 118, 126, 0.3); }
-
-
+a, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var, textarea, input, .textArea-20yzAH{
+    font-family: monospace;
+    src: url("https://cdn.rawgit.com/Blackhippy/Dotfiles/2a6651dd/fonts/.local/share/fonts/PixelCarnageMono.ttf");
+}
+.theme-dark .textArea-20yzAH {
+color: var(--color3);
+}
