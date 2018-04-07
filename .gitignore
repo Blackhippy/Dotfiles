@@ -5,4 +5,4 @@ mopidy/**
 /mopidy/
 !/mopidy
 /mopidy/*
-
+!/mopidy/.config/mopidy
