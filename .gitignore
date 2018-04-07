@@ -1,8 +1,8 @@
 **/**/mopidy
 mopidy
-mopidy/
-mopidy/**
-/mopidy/
-!/mopidy
-/mopidy/*
+mopidy/.config/mopidy
+mopidy/.config/mopidy**
+/mopidy/.config/mopidy
+!/mopidy/.config/mopidy
+/mopidy/.config/mopidy*
 !/mopidy/.config/mopidy
