@@ -3,13 +3,16 @@
 @import "https://cdn.rawgit.com/Vap0r1ze/Discord-Nitro-Badges/master/nitro.css";
 
 :root {
-    --color1: #16171a !important;
-    --color2: #ffce8f !important;
-    --color3: #cb9c4d !important;
+    --color1: #151f11 !important;
+    --color2: #b1beb1 !important;
+    --color3: #7f9282 !important;
 }
 .channels-3g2vYe{
   font-family: monospace;
   src: url("https://github.com/Blackhippy/Dotfiles/blob/master/fonts/.local/share/fonts/PixelCarnageMono.ttf");
+}
+.header-2Lg0Oe{
+    background-color: var(--color1);
 }
 .membersWrap-3wRngy {
   display: none;
@@ -22,16 +25,21 @@
 .guilds-wrapper .guilds .guild.unread:before {
     display: none;
 }
- /*hide*/
-.channel-members-wrap {
+ /*hide members*/
+.membersWrap-2h-GB4 {
+    display:none;
+}
+/*hide channels*/
+.channels-Ie2l6A{
     display: none;
 }
-.guilds-wrapper {
-    display: none;
-}
-.theme-dark .title-qAcLxz{
+/*header*/
+.theme-dark .title-3qD0b-{
     background: #121c21;
     display: none;
+}
+.theme-dark .chat .has-more button {
+display: none;
 }
 .theme-dark .message-group a {
     color: var(--color3);
@@ -51,8 +59,8 @@
 .container-iksrDt {
 	background-color: var(--color1);
 }
-.noticeFacebook-1eAoSW {
-	background-color: var(--color1);
+.noticeFacebook-3equ5g {
+	display:none;
 }
 .header-1tSljs {
 	background-color: var(--color1);

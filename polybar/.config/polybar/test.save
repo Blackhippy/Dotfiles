@@ -1,8 +1,7 @@
 [colors]
-bg = #000000
-fg = #86c4e9
-icon = #2895d7
-border = #ffffff
+bg = #050a0b
+fg = #ffaf80
+icon = #ac9e8c
 
 [bar/bottom]
 
@@ -10,25 +9,26 @@ monitor = HDMI-A-0
 bottom = true
 background = ${colors.bg}
 foreground = ${colors.fg}
-border-top-size = 7
-border-top-color = ${colors.border}
+#border-size = 7
+border-color = ${colors.icon}
+#border-size = 5
+#border-color = #728D9C
 
-padding-left = 3
-padding-right =4
-width = 30%
+padding-left = 1
+padding-right = 1
+width = 25%
 height = 40
 module-margin-left = 1
-module-margin-right = 1
-offset-x = 35%
+module-margin-right = 2
+offset-x = 40%
 offset-y = 1%
 
-font-0 = leggie:size=10
-font-3 = cherry:size=10
-font-1 = fontawesome:pixelsize=9
+font-0 = cherry:size=10
+font-1 = fontawesome:pixelsize=10
 
 modules-left = mpd
-modules-center = date
-modules-right =  vpn screenshot logout
+modules-center = date 
+modules-right =  vpn screenshot logout shutdown
 
 [module/mpd]
 type = internal/mpd
@@ -37,8 +37,8 @@ host = 127.0.0.1
 port = 6601
 interval = 1
 
-content  = <label-icon> <label-song>
-label-song = %{F#2895d7}%{F-}  %artist% - %title%
+content  = <label-icon> <label-song>  
+label-song =  %artist% - %title%
 label-song-padding = 1
 
 [module/date]
@@ -48,14 +48,14 @@ interval = 1.0
 date = %A %d
 time = %I:%M%p
 format = <label>
-label =%{F#2895d7}%{F-} %date%, %time%
+label = %date% %time%
 
 [module/vpn]
 type= custom/text
 content = 
 content-foreground = ${colors.icon}
 content-background = $(colors.bg)
-#content-padding = 1
+content-padding = 1
 click-left = nmcli con up arch && notify-send 'Polybar' 'Vpn Running' --icon=dialog-information
 click-right = nmcli con down arch && notify-send 'Polybar' 'Vpn Shutting Down' --icon=dialog-information
 
@@ -64,18 +64,24 @@ type = custom/text
 content = 
 content-foreground = ${colors.icon}
 content-background = ${colors.bg}
-#content-padding = 1
+content-padding = 1
 click-left = nougat -f && notify-send 'Polybar' 'Screenshot taken' --icon=dialog-information
 
 
 [module/logout]
 type = custom/text
+content = 
+content-foreground = ${colors.icon}
+content-background = ${colors.bg}
+content-padding = 1
+click-left = notify-send 'Polybar' 'Loggin out in 5 seconds' --icon=dialog-information && sleep 5 && killall Xorg
+
+[module/shutdown]
+type = custom/text
 content = 
 content-foreground = ${colors.icon}
 content-background = ${colors.bg}
-#content-padding = 1
-click-left = notify-send 'Polybar' 'Loggin out in 5 seconds' --icon=dialog-information && sleep 5 && killall Xorg
-
-
+content-padding = 1
+click-left = notify-send 'Polybar' 'Shutting down in 5 seconds' --icon=dialog-information && sleep 5 && shutdown
 
 

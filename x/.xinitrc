@@ -5,7 +5,7 @@ mopidy &
 compton --config ~/.compton.conf &
 redshift &
 nm-applet &
-polybar topbar &
+polybar bottom &
 dunst &
 pulseaudio --start &
 ~/.fehbg  &
