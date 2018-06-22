@@ -1,7 +1,7 @@
 # vim: ft=cfg
 [global]
 frame_width = 7
-frame_color = "#e9c1c5"
+frame_color = "#ffffff"
 geometry = "300x5-30+55"
 alignment = left
 follow = none
@@ -26,17 +26,17 @@ ignore_newline = no
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-foreground = "#e9c1c5"
-background = "#260000"
+foreground = "#f5d899"
+background = "#1b1b22"
 timeout = 360
 
 [urgency_normal]
-foreground = "#e9c1c5"
-background = "#260000"
+foreground = "#f5d899"
+background = "#1b1b22"
 timeout = 360
 
 [urgency_critical]
-foreground = "#e9c1c5"
-background = "#260000"
+foreground = "#f5d899"
+background = "#1b1b22"
 timeout = 360
 

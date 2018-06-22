@@ -1,7 +1,7 @@
 [colors]
-bg = #260000
-fg = #e9c1c5
-icon = #D26C70
+bg = #1b1b22
+fg = #f5d899
+icon = #FBC23A
 border = #ffffff
 
 [bar/bottom]
@@ -38,7 +38,7 @@ port = 6601
 interval = 1
 
 content  = <label-icon> <label-song>
-label-song = %{F#D26C70}%{F-}  %artist% - %title%
+label-song = %{F#FBC23A}%{F-}  %artist% - %title%
 label-song-padding = 1
 
 [module/date]
@@ -48,7 +48,7 @@ interval = 1.0
 date = %A %d
 time = %I:%M%p
 format = <label>
-label =%{F#D26C70}%{F-} %date%, %time%
+label =%{F#FBC23A}%{F-} %date%, %time%
 
 [module/vpn]
 type= custom/text

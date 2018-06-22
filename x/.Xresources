@@ -1,4 +1,4 @@
-URxvt*font: xft:leggie:size=10
+0URxvt*font: xft:leggie:size=10
 !URxvt*font: xft:cherry:size=10
 URxvt*boldfont: xft:leggiey:size=10
 !URxvt*font: xft:PixelCarnageMonoTT:size=10, xft:Font Awesome:size=9
@@ -20,48 +20,48 @@ URxvt*dynamicColors: on
 URxvt*lineSpace: 2
 URxvt.geometry: 72x16
 
-URxvt*foreground:   #e9c1c5
-URxvt*background:   [100]#260000
-URxvt*cursorColor:  #e9c1c5
-URxvt*borderColor:  [100]#260000
+URxvt*foreground:   #f5d899
+URxvt*background:   [100]#1b1b22
+URxvt*borderColor:  [100]#1b1b22
+
 
 ! Colors 0-15.
-*.color0: #260000
-*color0:  #260000
-*.color1: #C95052
-*color1:  #C95052
-*.color2: #D46368
-*color2:  #D46368
-*.color3: #D26C70
-*color3:  #D26C70
-*.color4: #D8837B
-*color4:  #D8837B
-*.color5: #BB7784
-*color5:  #BB7784
-*.color6: #DA7A85
-*color6:  #DA7A85
-*.color7: #e9c1c5
-*color7:  #e9c1c5
-*.color8: #a38789
-*color8:  #a38789
-*.color9: #C95052
-*color9:  #C95052
-*.color10: #D46368
-*color10:  #D46368
-*.color11: #D26C70
-*color11:  #D26C70
-*.color12: #D8837B
-*color12:  #D8837B
-*.color13: #BB7784
-*color13:  #BB7784
-*.color14: #DA7A85
-*color14:  #DA7A85
-*.color15: #e9c1c5
-*color15:  #e9c1c5
+*.color0: #1b1b22
+*color0:  #1b1b22
+*.color1: #DDA31F
+*color1:  #DDA31F
+*.color2: #EFB534
+*color2:  #EFB534
+*.color3: #FBC23A
+*color3:  #FBC23A
+*.color4: #B28B42
+*color4:  #B28B42
+*.color5: #918473
+*color5:  #918473
+*.color6: #F2B845
+*color6:  #F2B845
+*.color7: #f5d899
+*color7:  #f5d899
+*.color8: #ab976b
+*color8:  #ab976b
+*.color9: #DDA31F
+*color9:  #DDA31F
+*.color10: #EFB534
+*color10:  #EFB534
+*.color11: #FBC23A
+*color11:  #FBC23A
+*.color12: #B28B42
+*color12:  #B28B42
+*.color13: #918473
+*color13:  #918473
+*.color14: #F2B845
+*color14:  #F2B845
+*.color15: #f5d899
+*color15:  #f5d899
 
 ! Black color that will not be affected by bold highlighting.
-*.color66: #260000
-*color66:  #260000
+*.color66: #1b1b22
+*color66:  #1b1b22
 
 ! 2BWM
 twobwm.border_width: 	   10
@@ -70,12 +70,12 @@ twobwm.inverted_colors:    false
 twobwm.enable_compton: true
 
 ! 2BWM COLORS
-twobwm.focus_color: #e9c1c5 !color11
-twobwm.unfocus_color: #e9c1c5 !color10
-twobwm.fixed_color: #e9c1c5 !olor4
-twobwm.unkill_color: #e9c1c5 !color1
-twobwm.outer_border_color: #e9c1c5 !color0
-twobwm.fixed_unkill_color: #e9c1c5 !color5
+twobwm.focus_color: #ffffff !color11
+twobwm.unfocus_color: #ffffff !color10
+twobwm.fixed_color: #ffffff !olor4
+twobwm.unkill_color: #ffffff !color1
+twobwm.outer_border_color: #ffffff !color0
+twobwm.fixed_unkill_color: #ffffff !color5
 
 !twobwm.focus_color: #a9ae8b !color11
 !twobwm.unfocus_color: #91a991 !color10
