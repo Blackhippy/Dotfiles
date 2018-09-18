@@ -1,4 +1,4 @@
 # dotfiles
 
-![alt text](Spring.png)
+![alt text](wall.png)
 

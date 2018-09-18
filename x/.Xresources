@@ -1,11 +1,5 @@
-0URxvt*font: xft:leggie:size=10
-!URxvt*font: xft:cherry:size=10
-URxvt*boldfont: xft:leggiey:size=10
-!URxvt*font: xft:PixelCarnageMonoTT:size=10, xft:Font Awesome:size=9
-!URxvt*boldfont: xft:PixelCarnageMonoTT:size=10,xft:Font Awesome:size=9
-!URxvt*font: xft:hermit:size=8, xft:Font
-!URxvt*font: xft:ypn envypn:size=8, xft:Font
-!URxvt*boldfont: xft:ypn envypn:size=8, xft:FontAwesome:size=9
+URxvt*font: xft:ProFont:size=10
+URxvt*boldfont: xft:gelly:size=10 
 Xft.dpi: 96
 
 !Xft.autohint: 0
@@ -15,84 +9,65 @@ Xft.dpi: 96
 !Xft.rgba: rgb
 !Xft.lcdfilter: lcddefault
 URxvt.scrollBar: false
-URxvt.internalBorder: 20
+!URxvt.internalBorder: 20
 URxvt*dynamicColors: on
 URxvt*lineSpace: 2
 URxvt.geometry: 72x16
 
-URxvt*foreground:   #f5d899
-URxvt*background:   [100]#1b1b22
-URxvt*borderColor:  [100]#1b1b22
+! special
+URxvt*.foreground:   #c2cacc
+URxvt*.background:   [100]#000000
+URxvt*.cursorColor:  #c2cacc
+URxvt*borderColor:  [100]#000000
 
+! black
+*.color0:       #a7a5a9
+*.color8:       #d8d5db
 
-! Colors 0-15.
-*.color0: #1b1b22
-*color0:  #1b1b22
-*.color1: #DDA31F
-*color1:  #DDA31F
-*.color2: #EFB534
-*color2:  #EFB534
-*.color3: #FBC23A
-*color3:  #FBC23A
-*.color4: #B28B42
-*color4:  #B28B42
-*.color5: #918473
-*color5:  #918473
-*.color6: #F2B845
-*color6:  #F2B845
-*.color7: #f5d899
-*color7:  #f5d899
-*.color8: #ab976b
-*color8:  #ab976b
-*.color9: #DDA31F
-*color9:  #DDA31F
-*.color10: #EFB534
-*color10:  #EFB534
-*.color11: #FBC23A
-*color11:  #FBC23A
-*.color12: #B28B42
-*color12:  #B28B42
-*.color13: #918473
-*color13:  #918473
-*.color14: #F2B845
-*color14:  #F2B845
-*.color15: #f5d899
-*color15:  #f5d899
+! red
+*.color1:       #c3c2c3
+*.color9:       #f5f3f5
+
+! green
+*.color2:       #ad989d
+*.color10:      #dfc3ca
+
+! yellow
+*.color3:       #ad7e84
+*.color11:      #dfa2aa
+
+! blue
+*.color4:       #ac5d65
+*.color12:      #de7882
+
+! magenta
+*.color5:       #ab2834
+*.color13:      #dd3343
+
+! cyan
+*.color6:       #ab3f47
+*.color14:      #dd515b
+
+! white
+*.color7:       #c4232e
+*.color15:      #f62b39
 
 ! Black color that will not be affected by bold highlighting.
-*.color66: #1b1b22
-*color66:  #1b1b22
+*.color66: #000000
+*color66:  #000000
 
 ! 2BWM
-twobwm.border_width: 	   10
-twobwm.outer_border: 0
+twobwm.border_width: 	   2
+twobwm.outer_border: 5
 twobwm.inverted_colors:    false
 twobwm.enable_compton: true
 
-! 2BWM COLORS
-twobwm.focus_color: #ffffff !color11
-twobwm.unfocus_color: #ffffff !color10
-twobwm.fixed_color: #ffffff !olor4
-twobwm.unkill_color: #ffffff !color1
-twobwm.outer_border_color: #ffffff !color0
-twobwm.fixed_unkill_color: #ffffff !color5
-
-!twobwm.focus_color: #a9ae8b !color11
-!twobwm.unfocus_color: #91a991 !color10
-!twobwm.fixed_color: #66715e !color4
-!twobwm.unkill_color: #98905c !color1
-!twobwm.outer_border_color: #3a3219 !color0
-!twobwm.fixed_unkill_color: #6b6f54 !color5
+twobwm.focus_color: #ab3f47 !color11
+twobwm.unfocus_color: #ab3f47  !color10
+twobwm.fixed_color: #ab3f47  !color4
+twobwm.unkill_color: #ab3f47  !color1
+twobwm.outer_border_color: #ac5d65 !color0
+twobwm.fixed_unkill_color: #ab3f47 !color5
 
 
-! ST Settings
-st.font:  tewii:size8
-st.termname:                    st-256color
-st.shell:                       /bin/zsh
-st.tabspaces:                   16
-st.chscale:                     1.0
-st.cwscale:                     0.2
-st.foreground:   #aab6c5
-st.background:   #13191c
-st.cursorColor:  #aab6c5
 

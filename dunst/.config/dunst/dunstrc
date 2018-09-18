@@ -1,7 +1,6 @@
 # vim: ft=cfg
 [global]
-frame_width = 7
-frame_color = "#ffffff"
+
 geometry = "300x5-30+55"
 alignment = left
 follow = none
@@ -12,31 +11,29 @@ line_height = 5
 markup = no
 monitor = 0
 notification_height = 45
-padding = 35
+padding = 20
 plain_text = no
 separator_height = 0
 shrink = no
 sort = yes
-word_wrap = yes
-font = leggie 10
+word_wrap = no
+font = ProFont 10
+#font = dina 10
 #font = hermit
 #font = PixelCarnageMonoTT
 ignore_newline = no
 
 [urgency_low]
-# IMPORTANT: colors have to be defined in quotation marks.
-# Otherwise the "#" and following would be interpreted as a comment.
-foreground = "#f5d899"
-background = "#1b1b22"
+foreground = "#c2cacc"
+background = "#000000"
 timeout = 360
 
 [urgency_normal]
-foreground = "#f5d899"
-background = "#1b1b22"
+foreground = "#c2cacc"
+background = "#000000"
 timeout = 360
 
 [urgency_critical]
-foreground = "#f5d899"
-background = "#1b1b22"
+foreground = "#c2cacc"
+background = "#000000"
 timeout = 360
-

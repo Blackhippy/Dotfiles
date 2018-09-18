@@ -9,7 +9,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'zchee/deoplete-jedi'
-
+Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
 call plug#end()
 
 colorscheme wal
@@ -42,6 +42,9 @@ set hidden
 set noshowmode
 set laststatus=0
 set cmdheight=2
+set nobackup
+set nowritebackup
+set dir=/tmp
 
 " vim-better-whitespace
 let g:better_whitespace_enabled=1
