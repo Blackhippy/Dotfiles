@@ -10,6 +10,8 @@ Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'zchee/deoplete-jedi'
 Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
+Plug 'https://github.com/ap/vim-css-color'
+Plug 'https://github.com/hail2u/vim-css3-syntax'
 call plug#end()
 
 colorscheme wal

@@ -16,3 +16,6 @@ div.card>img {
 	border-radius: 5px 5px 0 0;
 	float: left !important;
 }
+.card-image {
+   float: left !important;
+}
