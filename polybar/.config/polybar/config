@@ -1,8 +1,8 @@
 [colors]
 bg = #000000
 fg = #c2cacc
-icon =  #ab3f47
-border = #c4232e
+icon =  #ad7b96
+border = #f5c4db
 
 [bar/bottom]
 
@@ -15,23 +15,23 @@ border-top-color = ${colors.border}
 
 padding-left = 3
 padding-right =4
-width = 30%
+width = 15%
 #widtth = 100%
 #height = 40
 height = 40
 module-margin-left = 1
 module-margin-right = 1
-offset-x = 35%
+offset-x = 45%
 offset-y = 1%
 
-font-0 = ProFont:size=12
+font-0 = peep:size=12
 #font-0 = ypn envypn
 #font-0 = dina:size=12
 font-1 = fontawesome:pixelsize=9
 
-modules-left = mpd
-modules-center = date
-modules-right =  vpn screenshot logout
+modules-left = 
+modules-center = mpd
+modules-right =  
 
 [module/mpd]
 type = internal/mpd
@@ -41,7 +41,7 @@ port = 6601
 interval = 1
 
 content  = <label-icon> <label-song>
-label-song = %{F#ab3f47}%{F-}  %artist% - %title%
+label-song = %{F#ad7b96}%{F-}  %artist% - %title%
 label-song-padding = 1
 
 [module/date]
@@ -51,7 +51,7 @@ interval = 1.0
 date = %A %d
 time = %I:%M%p
 format = <label>
-label =%{F#ab3f47}%{F-} %date%, %time%
+label =%{F#ad7b96}%{F-} %date%, %time%
 
 [module/vpn]
 type= custom/text
@@ -79,6 +79,12 @@ content-background = ${colors.bg}
 #content-padding = 1
 click-left = notify-send 'Polybar' 'Loggin out in 5 seconds' --icon=dialog-information && sleep 5 && pkill x
 
+[module/weather]
+type = custom/script
+exec = ~/.config/polybar/polybar-forecast
+exec-if = ping openweathermap.org -c 1
+interval = 600
+label-font = 3
 
 
 

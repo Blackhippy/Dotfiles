@@ -6,8 +6,11 @@ compton --config ~/.compton.conf &
 redshift &
 nm-applet &
 polybar bottom &
+polybar -c .config/polybar/weatherbar left &
+polybar -c .config/polybar/leftbar right &
 dunst &
-pulseaudio --start &
-~/.fehbg  &
+pulseaudio --start --exit-idle-time=-1 &
+hsetroot -solid '#AA6987' &
+#~/.fehbg  &
 unclutter &
 exec /usr/local/bin/2bwm

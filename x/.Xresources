@@ -1,5 +1,5 @@
-URxvt*font: xft:ProFont:size=10
-URxvt*boldfont: xft:gelly:size=10 
+URxvt*font: xft:peep:size=12
+URxvt*boldfont: xft:peep:size=12
 Xft.dpi: 96
 
 !Xft.autohint: 0
@@ -9,7 +9,7 @@ Xft.dpi: 96
 !Xft.rgba: rgb
 !Xft.lcdfilter: lcddefault
 URxvt.scrollBar: false
-!URxvt.internalBorder: 20
+URxvt.internalBorder: 20
 URxvt*dynamicColors: on
 URxvt*lineSpace: 2
 URxvt.geometry: 72x16
@@ -21,52 +21,53 @@ URxvt*.cursorColor:  #c2cacc
 URxvt*borderColor:  [100]#000000
 
 ! black
-*.color0:       #a7a5a9
-*.color8:       #d8d5db
+*.color0:       #6da4a4
+*.color8:       #6da4a4
 
 ! red
-*.color1:       #c3c2c3
-*.color9:       #f5f3f5
+*.color1:       #8ed6d6
+*.color9:       #8ed6d6
 
 ! green
-*.color2:       #ad989d
-*.color10:      #dfc3ca
+*.color2:       #9a9dab
+*.color10:      #9a9dab
 
 ! yellow
-*.color3:       #ad7e84
-*.color11:      #dfa2aa
+*.color3:       #c7cadd
+*.color11:      #c7cadd
 
 ! blue
-*.color4:       #ac5d65
-*.color12:      #de7882
+*.color4:       #ad7b96
+*.color12:      #ad7b96
 
 ! magenta
-*.color5:       #ab2834
-*.color13:      #dd3343
+*.color5:       #df9ec1
+*.color13:      #df9ec1
 
 ! cyan
-*.color6:       #ab3f47
-*.color14:      #dd515b
+*.color6:       #c39caf
+*.color14:      #c39caf
 
 ! white
-*.color7:       #c4232e
-*.color15:      #f62b39
+*.color7:       #f5c4db
+*.color15:      #f5c4db
+
 
 ! Black color that will not be affected by bold highlighting.
 *.color66: #000000
 *color66:  #000000
 
 ! 2BWM
-twobwm.border_width: 	   2
-twobwm.outer_border: 5
+twobwm.border_width: 	   5
+twobwm.outer_border: 2
 twobwm.inverted_colors:    false
 twobwm.enable_compton: true
 
-twobwm.focus_color: #ab3f47 !color11
-twobwm.unfocus_color: #ab3f47  !color10
-twobwm.fixed_color: #ab3f47  !color4
-twobwm.unkill_color: #ab3f47  !color1
-twobwm.outer_border_color: #ac5d65 !color0
+twobwm.focus_color: #f5c4db
+twobwm.unfocus_color: #f5c4db
+twobwm.fixed_color: #f5c4db
+twobwm.unkill_color: #f5c4db
+twobwm.outer_border_color: #ad7b96
 twobwm.fixed_unkill_color: #ab3f47 !color5
 
 
