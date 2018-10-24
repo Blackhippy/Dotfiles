@@ -1,0 +1,171 @@
+[colors]
+bg = #061D24
+fg = #8e535b
+icon =  #453036
+border = #614b4c
+
+[bar/bottom]
+
+monitor = HDMI-A-0
+bottom = true
+background = ${colors.bg}
+foreground = ${colors.fg}
+#border-top-size = 7
+border-top-size = 3
+border-top-color = ${colors.border}
+
+padding-left = 3
+padding-right =4
+width = 10%
+#widtth = 100%
+#height = 40
+height = 40
+module-margin-left = 1
+module-margin-right = 1
+offset-x = 5%
+offset-y = 1%
+radius = 8
+
+font-0 = Triskweline:size=12
+font-1 = Weather Icons:size=12
+font-2 = Material Icons:size=12
+font-3 = fontawesome:pixelsize=9
+
+modules-left = 2bwm 
+modules-center = 
+modules-right =  
+
+[module/2bwm]
+type = custom/script
+exec = ~/.bin/2bws.sh
+interval = 0.5
+format-prefix = 2BWM  
+format-padding = 1
+format-background = ${colors.bg}
+format-foreground = ${colors.fg}
+label-font = 1
+
+[bar/bottom1]
+monitor = HDMI-A-0
+bottom = true
+background = ${colors.bg}
+foreground = ${colors.fg}
+#border-top-size = 7
+border-top-size = 3
+border-top-color = ${colors.border}
+
+padding-left = 3
+padding-right =4
+width = 12%
+#widtth = 100%
+#height = 40
+height = 40
+module-margin-left = 1
+module-margin-right = 1
+offset-x = 45%
+offset-y = 1%
+radius = 8
+
+font-0 = Triskweline:size=12
+font-1 = Weather Icons:size=12
+font-2 = Material Icons:size=12
+font-3 = fontawesome:pixelsize=9
+
+modules-left = 
+modules-center = mpd
+modules-right =  
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6601
+interval = 1
+
+content  = <label-icon> <label-song>
+label-song = %{F#453036}%{F-}  %artist% - %title%
+label-song-padding = 1
+label-font = 3\
+
+[bar/bottom2]
+monitor = HDMI-A-0
+bottom = true
+background = ${colors.bg}
+foreground = ${colors.fg}
+#border-top-size = 7
+border-top-size = 3
+border-top-color = ${colors.border}
+
+padding-left = 3
+padding-right =4
+width = 16%
+#widtth = 100%
+#height = 40
+height = 40
+module-margin-left = 1
+module-margin-right = 1
+offset-x = 80%
+offset-y = 1%
+radius = 8
+
+font-0 = Triskweline:size=12
+font-1 = Weather Icons:size=12
+font-2 = Material Icons:size=12
+font-3 = fontawesome:pixelsize=9
+
+modules-left = weather 
+modules-center = date
+modules-right = vpn screenshot logout 
+[module/date]
+type = internal/date
+interval = 1.0
+
+date = "%Y-%M-%d"
+
+time-alt = %a %d %b
+time     = %I:%M %p
+
+label             = %time%
+format            = "  <label>"
+
+format-foreground = ${colors.fg}
+
+format-background = ${colors.bg}
+format-padding = 2
+[module/vpn]
+type= custom/text
+content = 
+content-foreground = ${colors.icon}
+content-background = $(colors.bg)
+#content-padding = 1
+click-left = nmcli con up arch && notify-send 'Polybar' 'Vpn Running' --icon=dialog-information
+click-right = nmcli con down arch && notify-send 'Polybar' 'Vpn Shutting Down' --icon=dialog-information
+label-font = 3
+
+[module/screenshot]
+type = custom/text
+content = 
+content-foreground = ${colors.icon}
+content-background = ${colors.bg}
+#content-padding = 1
+click-left = nougat -f && notify-send 'Polybar' 'Screenshot taken' --icon=dialog-information
+label-font = 3
+
+[module/logout]
+type = custom/text
+content = 
+content-foreground = ${colors.icon}
+content-background = ${colors.bg}
+#content-padding = 1
+click-left = notify-send 'Polybar' 'Loggin out in 5 seconds' --icon=dialog-information && sleep 5 && pkill x
+label-font = 3
+
+[module/weather]
+type = custom/script
+exec = ~/.config/polybar/polybar-forecast
+exec-if = ping openweathermap.org -c 1
+interval = 600
+
+
+
+

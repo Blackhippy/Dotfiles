@@ -27,6 +27,10 @@ options:
         directoryName: nvim
         links:
             - nvimconf: .config/nvim/init.vim
+    polybarPackage: 
+        directoryName: polybar
+        links:
+            - polybarconf: .config/polybar/config
     xPackage:
         directoryName: x
         links:
