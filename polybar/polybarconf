@@ -113,7 +113,7 @@ font-1 = Weather Icons:size=12
 font-2 = Material Icons:size=12
 font-3 = fontawesome:pixelsize=9
 
-modules-left = weather 
+modules-left =  
 modules-center = date
 modules-right = vpn screenshot logout 
 [module/date]

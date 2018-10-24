@@ -1,19 +1,16 @@
-# Dotfiles
+## Dotfiles
 ![alt text](setup.png)
-#Discord
+
+## Discord
 ![alt text](discord.png)
-#Wallpaper
+
+##Wallpaper
 ![alt text](wall.png)
 
-#Overview
-*Bar: ```polybar```
-
-*Editor: ```neovim```
-
-*Music Player: ```mopidy```
-
-*Shell: ```zsh```
-
-*Terminal: ```urxvt```
-
-*Window Manager: ```2bwm```
+## Overview
+-Bar: ```polybar```
+-Editor: ```neovim```
+-Music Player: ```mopidy```
+-Shell: ```zsh```
+-Terminal: ```urxvt```
+-Window Manager: ```2bwm```
