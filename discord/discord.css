@@ -1,12 +1,12 @@
 :root {
-    --bg: #0e0f0f !important;  
-    --color1: #c4232e !important;
-    --color2: #ac5d65 !important;
+    --bg: #000000 !important;  
+    --color1: #aa886f !important;
+    --color2: #a7a3a7 !important;
     --shadow: #000002 !important;
     --test: pink !important;
 }
 body {
-    font-family: ProFont;
+    font-family: envypn;
 }
 /* facebook notice */
 .noticeFacebook-3equ5g {

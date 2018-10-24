@@ -24,16 +24,16 @@ font = ProFont 10
 ignore_newline = no
 
 [urgency_low]
-foreground = "#c2cacc"
-background = "#000000"
+foreground = "#8e535b"
+background = "#061D24"
 timeout = 360
 
 [urgency_normal]
-foreground = "#c2cacc"
-background = "#000000"
+foreground = "#8e535b"
+background = "#061D24"
 timeout = 360
 
 [urgency_critical]
-foreground = "#c2cacc"
-background = "#000000"
+foreground = "#8e535b"
+background = "#061D24"
 timeout = 360

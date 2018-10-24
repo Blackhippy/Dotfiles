@@ -1,0 +1,72 @@
+URxvt*font: xft:Triskweline:size=12
+URxvt*boldfont: xft:neep:bold:size=12
+Xft.dpi: 96
+
+!Xft.autohint: 0
+!Xft.antialias: 1
+!Xft.hinting: true
+!Xft.hintstyle: hintslight
+!Xft.rgba: rgb
+!Xft.lcdfilter: lcddefault
+URxvt.scrollBar: false
+URxvt.internalBorder: 50
+URxvt*dynamicColors: on
+URxvt*lineSpace: 2
+URxvt.geometry: 72x16
+
+! special
+URxvt*.foreground:   #8e535b 
+URxvt*.background:   [100]#061D24
+URxvt*.cursorColor:  #8e535b 
+URxvt*borderColor:  [100]#061D24
+
+! black
+*.color0:       #073341
+*.color8:       #0c5a73
+! red
+*.color1:       #173241
+*.color9:       #285873
+
+! green
+*.color2:       #2d3741
+*.color10:      #4f6173
+
+! yellow
+*.color3:       #3e3940
+*.color11:      #6e6572
+
+! blue
+*.color4:       #453036
+*.color12:      #77525d
+
+! magenta
+*.color5:       #4e4245
+*.color13:      #806c71
+
+! cyan
+*.color6:       #5c353a
+*.color14:      #8e5159
+
+! white
+*.color7:       #614b4c
+*.color15:      #937173
+
+! Black color that will not be affected by bold highlighting.
+*.color66: #000000
+*color66:  #000000
+
+! 2BWM
+twobwm.border_width: 	   5
+twobwm.outer_border: 2
+twobwm.inverted_colors:    false
+twobwm.enable_compton: true
+
+twobwm.focus_color: #614b4c !color7
+twobwm.unfocus_color: #614b4c
+twobwm.fixed_color: #614b4c
+twobwm.unkill_color: #614b4c
+twobwm.outer_border_color: #453036 !color4
+twobwm.fixed_unkill_color: #614b4c
+
+
+

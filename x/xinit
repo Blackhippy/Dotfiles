@@ -1,0 +1,15 @@
+xset m 1/1 &
+xset s off -dpms &
+pulseaudio --start &
+xrdb -merge ~/.Xresources &
+mopidy &
+compton --config ~/.compton.conf &
+redshift &
+polybar bottom &
+polybar bottom1 &
+polybar bottom2 &
+dunst &
+#hsetroot -solid '#1A100F' &
+~/.fehbg  &
+unclutter &
+exec /usr/local/bin/2bwm
