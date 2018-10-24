@@ -4,7 +4,7 @@
 ## Discord
 ![alt text](discord.png)
 
-##Wallpaper
+## Wallpaper
 ![alt text](wall.png)
 
 ## Overview
