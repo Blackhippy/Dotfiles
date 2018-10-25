@@ -16,14 +16,14 @@ border-top-color = ${colors.border}
 
 padding-left = 3
 padding-right =4
-width = 10%
+width = 100%
 #widtth = 100%
 #height = 40
 height = 40
 module-margin-left = 1
 module-margin-right = 1
-offset-x = 5%
-offset-y = 1%
+offset-x = 0%
+offset-y = 0%
 radius = 8
 
 font-0 = Triskweline:size=12
@@ -31,49 +31,20 @@ font-1 = Weather Icons:size=12
 font-2 = Material Icons:size=12
 font-3 = fontawesome:pixelsize=9
 
-modules-left = 2bwm 
-modules-center = 
-modules-right =  
+modules-left =  mpd
+modules-center = 2bwm
+modules-right =  date vpn screenshot logout
 
 [module/2bwm]
 type = custom/script
 exec = ~/.bin/2bws.sh
 interval = 0.5
-format-prefix = 2BWM  
+format-prefix =  
 format-padding = 1
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
 label-font = 1
 
-[bar/bottom1]
-monitor = HDMI-A-0
-bottom = true
-background = ${colors.bg}
-foreground = ${colors.fg}
-#border-top-size = 7
-border-top-size = 3
-border-top-color = ${colors.border}
-
-padding-left = 3
-padding-right =4
-width = 12%
-#widtth = 100%
-#height = 40
-height = 40
-module-margin-left = 1
-module-margin-right = 1
-offset-x = 45%
-offset-y = 1%
-radius = 8
-
-font-0 = Triskweline:size=12
-font-1 = Weather Icons:size=12
-font-2 = Material Icons:size=12
-font-3 = fontawesome:pixelsize=9
-
-modules-left = 
-modules-center = mpd
-modules-right =  
 
 [module/mpd]
 type = internal/mpd
@@ -83,39 +54,11 @@ port = 6601
 interval = 1
 
 content  = <label-icon> <label-song>
-label-song = %{F#453036}%{F-}  %artist% - %title%
+label-song = %{F#453036}%{F-}  %artist% - %title%
 label-song-padding = 1
-label-font = 3\
+label-font = 3
 
-[bar/bottom2]
-monitor = HDMI-A-0
-bottom = true
-background = ${colors.bg}
-foreground = ${colors.fg}
-#border-top-size = 7
-border-top-size = 3
-border-top-color = ${colors.border}
 
-padding-left = 3
-padding-right =4
-width = 16%
-#widtth = 100%
-#height = 40
-height = 40
-module-margin-left = 1
-module-margin-right = 1
-offset-x = 80%
-offset-y = 1%
-radius = 8
-
-font-0 = Triskweline:size=12
-font-1 = Weather Icons:size=12
-font-2 = Material Icons:size=12
-font-3 = fontawesome:pixelsize=9
-
-modules-left =  
-modules-center = date
-modules-right = vpn screenshot logout 
 [module/date]
 type = internal/date
 interval = 1.0
@@ -124,6 +67,7 @@ date = "%Y-%M-%d"
 
 time-alt = %a %d %b
 time     = %I:%M %p
+time-TZ = "America/Chicago"
 
 label             = %time%
 format            = "  <label>"
