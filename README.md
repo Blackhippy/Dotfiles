@@ -1,13 +1,15 @@
 ## Dotfiles
 ![alt text](setup.png)
 
+## Startpage
+![alt text](startpage.png)
+
 ## Discord
 ![alt text](discord.png)
 
 ## Wallpaper
 ![alt text](wall.png)
 
-```credits:https://www.toptal.com/designers/subtlepatterns/wheat-pattern/```
 
 ## Overview
 -Bar: ```polybar```

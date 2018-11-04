@@ -41,3 +41,9 @@ options:
         links:
             - 2bws: .bin/2bws.sh
             - gitupdate: .bin/gitupdate.sh
+            - date: .bin/date.sh
+    startpagePackage:
+        directoryName: startpage 
+        links:
+            - startpages: .config/startpage
+        
