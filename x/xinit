@@ -5,11 +5,11 @@ xrdb -merge ~/.Xresources &
 mopidy &
 compton --config ~/.compton.conf &
 redshift &
+polybar top &
 polybar bottom &
-polybar bottom1 &
-polybar bottom2 &
 dunst &
 #hsetroot -solid '#1A100F' &
 ~/.fehbg  &
 unclutter &
+mpd_discord_richpresence -p=6601 &
 exec /usr/local/bin/2bwm

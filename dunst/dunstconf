@@ -25,15 +25,15 @@ ignore_newline = no
 
 [urgency_low]
 foreground = "#8e535b"
-background = "#061D24"
+background = "#05181F"
 timeout = 360
 
 [urgency_normal]
 foreground = "#8e535b"
-background = "#061D24"
+background = "#05181F"
 timeout = 360
 
 [urgency_critical]
 foreground = "#8e535b"
-background = "#061D24"
+background = "#05181F"
 timeout = 360

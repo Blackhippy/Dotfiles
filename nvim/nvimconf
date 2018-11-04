@@ -1,5 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'cseelus/vim-colors-tone'
+Plug 'TheAtlasEngine/PastelColors'
 Plug 'dylanaraps/wal.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'raimondi/delimitmate'
@@ -14,6 +16,7 @@ Plug 'https://github.com/ap/vim-css-color'
 Plug 'https://github.com/hail2u/vim-css3-syntax'
 call plug#end()
 
+set t_Co=256
 colorscheme wal
 
 filetype indent plugin on
@@ -63,7 +66,7 @@ endif
 " let g:gitgutter_sign_removed = ''
 
 " deoplete
-" let g:deoplete#enable_at_startup = 1
-" let g:neotags#python#order = 'mfc'
-" let g:python3_host_prog = '/usr/bin/python3'
-" let g:deoplete= 1
+ let g:deoplete#enable_at_startup = 1
+ let g:neotags#python#order = 'mfc'
+ let g:python3_host_prog = '/usr/bin/python3.7'
+ let g:deoplete= 1
