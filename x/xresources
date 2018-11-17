@@ -1,4 +1,4 @@
-URxvt*font: xft:Triskweline:size=12
+Rxvt*font: xft:Triskweline:size=12
 URxvt*boldfont: xft:neep:bold:size=12
 Xft.dpi: 96
 
@@ -15,41 +15,41 @@ URxvt*lineSpace: 2
 URxvt.geometry: 72x16
 
 ! special
-URxvt*.foreground:   #8e535b 
-URxvt*.background:   [100]#05181F
-URxvt*.cursorColor:  #8e535b 
-URxvt*borderColor:  [100]#05181F
+URxvt*.foreground:   #1d403a
+URxvt*.background:   [100]#050b0a
+URxvt*.cursorColor:  #46aa66
+URxvt*borderColor:  [100]#050b0a
 
 ! black
-*.color0:       #694745
-*.color8:       #9b6865
+*.color0:       #c5c6c4
+*.color8:       #f6f8f5
 ! red
-*.color1:       #845d58
-*.color9:       #b68079
+*.color1:       #9aab93
+*.color9:       #c7ddbd
 
 ! green
-*.color2:       #a2776f
-*.color10:      #d49b91
+*.color2:       #b4bab2
+*.color10:      #e4ece1
 
 ! yellow
-*.color3:       #463f3c
-*.color11:      #786c66
+*.color3:       #46aa66
+*.color11:      #5adc83
 
 ! blue
-*.color4:       #b8a496
-*.color12:      #ead0be
+*.color4:       #5dab7b
+*.color12:      #78dd9e
 
 ! magenta
-*.color5:       #50584a
-*.color13:      #7d8a74
+*.color5:       #76b18f
+*.color13:      #97e3b7
 
 ! cyan
-*.color6:       #61735f
-*.color14:      #8ba588
+*.color6:       #84c3a5
+*.color14:      #a5f5cf
 
 ! white
-*.color7:       #79937f
-*.color15:      #a2c5aa
+*.color7:       #96c7b1
+*.color15:      #bbf9dd
 
 
 ! Black color that will not be affected by bold highlighting.
@@ -62,12 +62,12 @@ twobwm.outer_border: 2
 twobwm.inverted_colors:    false
 twobwm.enable_compton: true
 
-twobwm.focus_color: #79937f !color7
-twobwm.unfocus_color: #79937f
-twobwm.fixed_color: #79937f
-twobwm.unkill_color: #79937f
-twobwm.outer_border_color: #b8a496 !color4
-twobwm.fixed_unkill_color: #79937f
+twobwm.focus_color: #96c7b1 !color7
+twobwm.unfocus_color: #96c7b1
+twobwm.fixed_color: #96c7b1
+twobwm.unkill_color: #96c7b1
+twobwm.outer_border_color: #5dab7b !color4
+twobwm.fixed_unkill_color: #96c7b1
 
 
 

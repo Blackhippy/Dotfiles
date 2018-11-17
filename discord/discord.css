@@ -1,7 +1,7 @@
 :root {
-    --bg: #061D24 !important;  
-    --color1: #453036 !important;
-    --color2: #8e535b !important;
+    --bg: #050b0a !important;
+    --color1: #96c7b1 !important;
+    --color2: #5dab7b !important;
     --shadow: #000002 !important;
     --test: pink !important;
 }
@@ -19,11 +19,11 @@ body {
        box-shadow: 0 3px 0 var(--shadow);
 }
 .theme-dark .topic-2QX7LI {
-	color: var(--color1);	
-}   
+	color: var(--color1);
+}
 .header-2o-2hj {
 	background-color: var(--bg);
-    color: var(--color1); 
+    color: var(--color1);
     padding: 0 12px 0 16px;
     box-shadow: 0 3px 0 var(--shadow);
 }
@@ -57,6 +57,9 @@ body {
 .image-33JSyf {
 	display: none;
 }
+.status-2s6iDp {
+    display: none;
+}
 
 /* chat */
 .theme-dark .messagesWrapper-3lZDfY {
@@ -64,7 +67,7 @@ body {
 }
 .theme-dark .chat-3bRxxu, .theme-dark .chat-3bRxxu form, .theme-dark .content-yTz4x3 {
 	background-color: var(--bg);
-}	
+}
 .theme-dark .inner-zqa7da {
     background-color: var(--color1);
     padding-left: 10px;
@@ -114,7 +117,7 @@ body {
 	background-color: var(--color1);
 	color: var(--color1);
 }
-.scroller-2FKFPG { 
+.scroller-2FKFPG {
     background-color: var(--bg);
 }
 .contentSelectedText-3wUhMi, .contentSelectedVoice-1WDIBM {
@@ -166,7 +169,7 @@ body {
     border-radius: 0px !important;
 }
 /* guilds */
-.theme-dark .guildsWrapper-5TJh6A { 
+.theme-dark .guildsWrapper-5TJh6A {
     display: none;
 
 
@@ -178,7 +181,7 @@ body {
 }
 .guilds-wrapper .guilds {
     background-color: var(--bg);
-    
+
 }
 .theme-dark .guild-1EfMGQ.unread-qLkInr:before {
 	display:none;

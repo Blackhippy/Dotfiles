@@ -1,17 +1,19 @@
 call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-Plug 'cseelus/vim-colors-tone'
-Plug 'TheAtlasEngine/PastelColors'
+Plug 'w0rp/ale'
+Plug 'djdt/pyparens.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'dylanaraps/wal.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'raimondi/delimitmate'
 Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'zchee/deoplete-jedi'
 Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/nerdtree'
 Plug 'https://github.com/ap/vim-css-color'
 Plug 'https://github.com/hail2u/vim-css3-syntax'
 call plug#end()
@@ -50,6 +52,12 @@ set cmdheight=2
 set nobackup
 set nowritebackup
 set dir=/tmp
+set number
+
+" nerdtree
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+map <F1> :NERDTreeToggle<CR>
 
 " vim-better-whitespace
 let g:better_whitespace_enabled=1
@@ -70,3 +78,5 @@ endif
  let g:neotags#python#order = 'mfc'
  let g:python3_host_prog = '/usr/bin/python3.7'
  let g:deoplete= 1
+" tabbar
+nmap <F8> :TagbarToggle<CR>

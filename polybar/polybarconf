@@ -1,13 +1,13 @@
 [colors]
-bg = #05181F
-fg = #8e535b
-icon =  #453036
-border = #614b4c
+bg = #050b0a
+fg = #1d403a
+icon =  #5dab7b
+border = #96c7b1
 
-[bar/top]
+[bar/bottom]
 
 monitor = HDMI-A-0
-bottom = false
+bottom = true
 background = ${colors.bg}
 foreground = ${colors.fg}
 #border-top-size = 7
@@ -16,24 +16,25 @@ border-bottom-color = ${colors.border}
 
 padding-left = 3
 padding-right =4
-width = 100%
+width = 50%
 #widtth = 100%
 #height = 40
 height = 30
 module-margin-left = 1
 module-margin-right = 1
-offset-x = 0%
-offset-y = 0%
+offset-x = 25%
+offset-y = 3%
 #radius = 8
 
 font-0 = Triskweline:size=12
-font-1 = Weather Icons:size=12
-font-2 = Material Icons:size=12
-font-3 = fontawesome:pixelsize=9
+font-1 = feather:size=12
+font-2 = Weather Icons:size=12
+font-3 = Material Icons:size=12
+font-4 = fontawesome:pixelsize=9
 
 modules-left =  mpd
 modules-center = 2bwm
-modules-right =  date
+modules-right =  pulse vpn screenshot logout
 
 [module/2bwm]
 type = custom/script
@@ -54,7 +55,7 @@ port = 6601
 interval = 1
 
 content  = <label-icon> <label-song>
-label-song = %{F#453036}%{F-}  %artist% - %title%
+label-song = %{F#5dab7b}%{F-}  %artist% - %title%
 label-song-padding = 1
 label-font = 3
 format-stopped  =  No songs playing
@@ -62,42 +63,15 @@ format-offline = <label-offline>
 label-offline =  mpd is offline
 
 [module/date]
-type = custom/script
-format-prefix =  
-format-padding = 3
-exec = ~/.bin/date.sh
+type = internal/date
 interval = 1.0
-
-[bar/bottom]
-
-monitor = HDMI-A-0
-bottom = true
-background = ${colors.bg}
-foreground = ${colors.fg}
-#border-top-size = 7
-border-top-size = 3
-border-top-color = ${colors.border}
-
-padding-left = 3
-padding-right =4
-width = 5%
-#widtth = 100%
-#height = 40
-height = 30
-module-margin-left = 1
-module-margin-right = 1
-offset-x = 95%
-offset-y = 0%
-#radius = 8
-
-font-0 = Triskweline:size=12
-font-1 = Weather Icons:size=12
-font-2 = Material Icons:size=12
-font-3 = fontawesome:pixelsize=9
-
-modules-left =  
-modules-center = pulse vpn screenshot logout
-modules-right = 
+format-prefix =
+format-prefix-foreground = ${colors.icon}
+format =<label>
+label = %time%
+time = "%l:%M
+#time = TZ=America/Chicago’ date +"%l:%M"
+label-font = 1
 
 [module/pulse]
 type = custom/text
@@ -142,6 +116,10 @@ exec = ~/.config/polybar/polybar-forecast
 exec-if = ping openweathermap.org -c 1
 interval = 600
 
-
+[module/openweathermap-simple]
+type = custom/script
+exec = ~/.bin/openweathermap-simple.sh
+interval = 600
+label-font = 2
 
 

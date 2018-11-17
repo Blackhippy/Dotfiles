@@ -8,8 +8,8 @@ redshift &
 polybar top &
 polybar bottom &
 dunst &
-#hsetroot -solid '#1A100F' &
-~/.fehbg  &
+hsetroot -solid '#0d1d1a' &
+#~/.fehbg  &
 unclutter &
 mpd_discord_richpresence -p=6601 &
 exec /usr/local/bin/2bwm
