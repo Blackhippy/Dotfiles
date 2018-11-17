@@ -8,7 +8,7 @@
 ![alt text](discord.png)
 
 ## Wallpaper
-![alt text](wall.png)
+```#0d1d1a```
 
 
 ## Overview
