@@ -1,0 +1,49 @@
+options:
+    base: &base
+        dotfileDirectory: .dots
+
+    comptonPackage: 
+        directoryName: compton
+        links:
+            - comptonConf: .compton.conf
+    discordPackage:
+        directoryName: discord
+        links:
+            - discord.css: discord.css
+    dunstPackage:
+        directoryName: dunst
+        links:
+            - dunstconf: .config/dunst/dunstrc
+    fontsPackage:
+        directoryName: fonts
+        links:
+            - trisk: .local/share/fonts/trisk.pcf
+            - weathericon: .local/share/fonts/weathericons-regular-webfont.ttf
+    ncmpcppPackage:
+        directoryName: ncmpcpp
+        links:
+            - ncmpcppConf: .ncmpcpp/config
+    nvimPackage:
+        directoryName: nvim
+        links:
+            - nvimconf: .config/nvim/init.vim
+    polybarPackage: 
+        directoryName: polybar
+        links:
+            - polybarconf: .config/polybar/config
+    xPackage:
+        directoryName: x
+        links:
+            - xinit: .xinitrc
+            - xresources: .Xresources
+    scriptsPackage:
+        directoryName: scripts
+        links:
+            - 2bws: .bin/2bws.sh
+            - gitupdate: .bin/gitupdate.sh
+            - date: .bin/date.sh
+    startpagePackage:
+        directoryName: startpage 
+        links:
+            - startpages: .config/startpage
+        

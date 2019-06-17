@@ -1,0 +1,15 @@
+xset m 1/1 &
+xset s off -dpms &
+pulseaudio --start &
+xrdb -merge ~/.Xresources &
+mopidy &
+compton --config ~/.compton.conf &
+redshift &
+polybar top &
+polybar bottom &
+dunst &
+hsetroot -solid '#0d1d1a' &
+#~/.fehbg  &
+unclutter &
+mpd_discord_richpresence -p=6601 &
+exec /usr/local/bin/2bwm

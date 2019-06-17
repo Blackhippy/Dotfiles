@@ -1,0 +1,125 @@
+[colors]
+bg = #050b0a
+fg = #1d403a
+icon =  #5dab7b
+border = #96c7b1
+
+[bar/bottom]
+
+monitor = HDMI-A-0
+bottom = true
+background = ${colors.bg}
+foreground = ${colors.fg}
+#border-top-size = 7
+border-bottom-size = 3
+border-bottom-color = ${colors.border}
+
+padding-left = 3
+padding-right =4
+width = 50%
+#widtth = 100%
+#height = 40
+height = 30
+module-margin-left = 1
+module-margin-right = 1
+offset-x = 25%
+offset-y = 3%
+#radius = 8
+
+font-0 = Triskweline:size=12
+font-1 = feather:size=12
+font-2 = Weather Icons:size=12
+font-3 = Material Icons:size=12
+font-4 = fontawesome:pixelsize=9
+
+modules-left =  mpd
+modules-center = 2bwm
+modules-right =  pulse vpn screenshot logout
+
+[module/2bwm]
+type = custom/script
+exec = ~/.bin/2bws.sh
+interval = 0.5
+format-prefix =  
+format-padding = 1
+format-background = ${colors.bg}
+format-foreground = ${colors.fg}
+label-font = 1
+
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6601
+interval = 1
+
+content  = <label-icon> <label-song>
+label-song = %{F#5dab7b}%{F-}  %artist% - %title%
+label-song-padding = 1
+label-font = 3
+format-stopped  =  No songs playing
+format-offline = <label-offline>
+label-offline =  mpd is offline
+
+[module/date]
+type = internal/date
+interval = 1.0
+format-prefix =
+format-prefix-foreground = ${colors.icon}
+format =<label>
+label = %time%
+time = "%l:%M
+#time = TZ=America/Chicago’ date +"%l:%M"
+label-font = 1
+
+[module/pulse]
+type = custom/text
+content = 
+content-foreground = ${colors.icon}
+content-background = $(colors.bg)
+click-left = pactl set-card-profile alsa_card.pci-0000_28_00.3 output:iec958-stereo
+click-right = pactl set-card-profile alsa_card.pci-0000_28_00.3 output:analog-stereo
+label-font = 3
+
+[module/vpn]
+type= custom/text
+content = 
+content-foreground = ${colors.icon}
+content-background = $(colors.bg)
+#content-padding = 1
+click-left = nmcli con up arch && notify-send 'Polybar' 'Vpn Running' --icon=dialog-information
+click-right = nmcli con down arch && notify-send 'Polybar' 'Vpn Shutting Down' --icon=dialog-information
+label-font = 3
+
+[module/screenshot]
+type = custom/text
+content = 
+content-foreground = ${colors.icon}
+content-background = ${colors.bg}
+#content-padding = 1
+click-left = nougat -f && notify-send 'Polybar' 'Screenshot taken' --icon=dialog-information
+label-font = 3
+
+[module/logout]
+type = custom/text
+content = 
+content-foreground = ${colors.icon}
+content-background = ${colors.bg}
+#content-padding = 1
+click-left = notify-send 'Polybar' 'Loggin out in 5 seconds' --icon=dialog-information && sleep 5 && pkill x
+label-font = 3
+
+[module/weather]
+type = custom/script
+exec = ~/.config/polybar/polybar-forecast
+exec-if = ping openweathermap.org -c 1
+interval = 600
+
+[module/openweathermap-simple]
+type = custom/script
+exec = ~/.bin/openweathermap-simple.sh
+interval = 600
+label-font = 2
+
+

@@ -1,0 +1,238 @@
+:root {
+    --bg: #050b0a !important;
+    --color1: #96c7b1 !important;
+    --color2: #5dab7b !important;
+    --shadow: #000002 !important;
+    --test: pink !important;
+}
+body {
+    font-family: Triskweline;
+}
+/* facebook notice */
+.noticeFacebook-3equ5g {
+   background-color: var(--bg);
+  	 color: var(--color1);
+}
+.theme-dark .title-3qD0b- {
+       background-color: var(--bg);
+       padding: 0 12px 0 16px;
+       box-shadow: 0 3px 0 var(--shadow);
+}
+.theme-dark .topic-2QX7LI {
+	color: var(--color1);
+}
+.header-2o-2hj {
+	background-color: var(--bg);
+    color: var(--color1);
+    padding: 0 12px 0 16px;
+    box-shadow: 0 3px 0 var(--shadow);
+}
+.theme-dark .channelName-3stJzi, .theme-dark .groupDM-3qU0Ks .channelName-3stJzi, .theme-dark .groupDMManaged-1GyXtq .channelName-3stJzi, .theme-dark .input-autosize-input, .theme-dark .input-autosize-input:focus {
+	color: var(--color1);
+}
+.theme-dark .search .search-bar {
+    background-color: var(--bg);
+}
+/* members */
+.theme-dark .members-1998pB {
+    background-color: var(--bg);
+    padding: -12px 0 0 -16px;
+    box-shadow: -3px 0 0 var(--shadow);
+}
+.theme-dark .membersGroup-v9BXpm {
+    color: var(--color1);
+}
+.botTagRegular-2HEhHi {
+    background: var(--color1);
+    color: var(--shadow);
+}
+/*hides avatars*/
+.mask-3OgeRz  {
+	display: none;
+}
+/*Hide groups titles*/
+.theme-dark .membersGroup-v9BXpm {
+    display: none;
+}
+.image-33JSyf {
+	display: none;
+}
+.status-2s6iDp {
+    display: none;
+}
+
+/* chat */
+.theme-dark .messagesWrapper-3lZDfY {
+    background-color: var(--bg);
+}
+.theme-dark .chat-3bRxxu, .theme-dark .chat-3bRxxu form, .theme-dark .content-yTz4x3 {
+	background-color: var(--bg);
+}
+.theme-dark .inner-zqa7da {
+    background-color: var(--color1);
+    padding-left: 10px;
+    border-radius: -100px;
+    width: 100%;
+    box-shadow: 1px 1px 1px 1px  #000002;
+}
+.theme-dark .markup-2BOw-j {
+    color: var(--color2);
+}
+.theme-dark .channelTextArea-rNsIhG {
+    border-top: 1px solid var(--bg);
+}
+.theme-dark .typing-2GQL18 {
+    background-color: var(--bg);
+    color: var(--color1);
+}
+.theme-dark .divider-3gKybi.dividerRed-MKoLlr>span {
+	background-color: var(--color1);
+    color: var(--bg);
+}
+.theme-dark .markup-2BOw-j code, .theme-dark .markup-2BOw-j code.inline {
+    background: #000002;
+}
+.theme-dark .markup-2BOw-j pre {
+    background: var(--color1);
+    border-color: rgba(32,34,37,.3);
+}
+.jumpToPresentBar-9P20AM button {
+    background: var(--shadow);
+    color: var(--color1);
+    line-height: 14px;
+    padding: 6px 10px;
+    text-align: left;
+}
+/* channels */
+.containerCompact-3V0ioj {
+    padding: 9px 0;
+}
+.theme-dark .container-2Thooq, .theme-light .container-2Thooq {
+    background-color: var(--bg);
+}
+.channelNotices-41mJbj .channelNotice-1-XFjC.quickswitcher-35bYg4 {
+	background-color: var(--bg);
+}
+.channelNotices-41mJbj .channelNotice-1-XFjC .message-3SOT5P .btn-11C5_u {
+	background-color: var(--color1);
+	color: var(--color1);
+}
+.scroller-2FKFPG {
+    background-color: var(--bg);
+}
+.contentSelectedText-3wUhMi, .contentSelectedVoice-1WDIBM {
+    background-color: var(--color1);
+}
+.unread-1Dp-OI {
+	display: none;
+}
+.colorConnectedText-1c_uzY, .colorConnectedVoice-3kyvUN, .colorDefaultText-oas-QM, .colorDefaultVoice-3wYlhb, .colorHoveredText-OZnAgu, .colorHoveredVoice-1kucsK, .colorLockedText-1VRkPt, .colorLockedVoice-2UlBjl, .colorSelectedText-1y4Wvs, .colorSelectedVoice-Xcb_9R, .colorUnreadText-2t7XRb, .colorUnreadVoice-137o4S {
+	display:none;
+}
+.iconCollapsed-3hFp_8, .iconDefault-3Gr8d2, .nameCollapsed-34uFWo, .nameDefault-2DI02H {
+    color: var(--color1);
+}
+.nameDefaultText-24KCy5, .nameDefaultVoice-3WUH7s, .nameLockedText-3pqQcL, .nameLockedVoice-26MhB1 {
+    color: var(--color2);
+}
+.nameUnreadText-DfkrI4, .nameUnreadVoice-EVo-wI {
+    color:  var(--color2);
+}
+.nameConnectedText-3CzNQn, .nameConnectedVoice-MHUX5F, .nameSelectedText-sp_EUw, .nameSelectedVoice-1qSph5 {
+    color: var(--shadow);
+}
+
+.scroller-wrap ::-webkit-scrollbar-thumb {
+        background-color: var(--color1) !important;
+        border: none !important;
+        border-radius: 4px !important;
+}
+.scroller-wrap ::-webkit-scrollbar-track-piece {
+        background-color: transparent !important;
+        border-color: transparent !important;
+        border: none !important
+}
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    width:5px !important;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--color1) !important;
+    width:5px !important;
+    border:none !important;
+    border-radius: 0px !important;
+}
+/* guilds */
+.theme-dark .guildsWrapper-5TJh6A {
+    display: none;
+
+
+.scroller-wrap .scroller{
+	background-color: var(--bg);
+}
+.guilds-wrapper {
+	display: none;
+}
+.guilds-wrapper .guilds {
+    background-color: var(--bg);
+
+}
+.theme-dark .guild-1EfMGQ.unread-qLkInr:before {
+	display:none;
+}
+
+
+pre,
+code {
+  padding: 0px !important;
+  margin-left: 3px !important;
+  margin: 0px !important;
+  line-height: 20px !important;
+  border: none !important;
+  padding-bottom: 6px !important;
+  border-radius: 3px !important;
+}
+pre.inline,
+code.inline {
+  padding: 3px !important;
+  background: #2c3643 !important;
+}
+pre.hljs:before,
+code.hljs:before {
+  height: 20px;
+  width: 100%;
+  overflow: hidden !important;
+  display: block;
+  content: attr(class);
+  color: white;
+  padding-top: 6px;
+  padding-left: 3px;
+  padding: -5px;
+  padding-right: 337px;
+  background: #1d252e;
+  margin-left: -340px;
+  text-transform: capitalize;
+}
+pre:not(.inline),
+code:not(.inline) {
+  background: repeating-linear-gradient(0deg, #28323e 5px, #28323e 25px, #2c3643 0, #2c3643 45px) !important;
+}
+pre > *,
+code > * {
+  padding-left: 3px !important;
+}
+
+/*now playing*/
+.headerPlaying-j0WQBV{
+	background-color: var(--bg);
+}
+.theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6 {
+	background-color: var(--bg);
+}
+
