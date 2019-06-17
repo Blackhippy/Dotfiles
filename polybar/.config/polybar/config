@@ -1,0 +1,159 @@
+
+[colors]
+bg = #0a1614
+fg = #e7e7e7
+icon = #b1a495
+border = #faf6f5
+
+[bar/top]
+
+monitor = HDMI-A-0
+bottom = false
+background = ${colors.bg}
+foreground = ${colors.fg}
+#border-top-size = 3
+#border-top-color = ${colors.border}
+border-bottom-size = 10
+border-bottom-color = ${colors.border}
+
+padding-left = 3
+padding-right =4
+#width = 50%
+#widtth = 100%
+#height = 40
+height = 30
+module-margin-left = 1
+module-margin-right = 1
+#offset-x = 25%
+#offset-y = 0.5%
+#radius = 8
+
+font-0 = tewi:size=12
+font-1 = Material Icons:size=12
+
+modules-left =  mpd
+modules-center = 2bwm
+modules-right =  pulse screenshot logout
+
+[bar/bottom]
+
+monitor = HDMI-A-0
+bottom = true
+background = ${colors.bg}
+foreground = ${colors.fg}
+border-top-size = 10
+border-top-color = ${colors.border}
+
+padding-left = 3
+padding-right =4
+#width = 50%
+#widtth = 100%
+#height = 40
+height = 30
+module-margin-left = 1
+module-margin-right = 1
+#offset-x = 25%
+#offset-y = 0.5%
+#radius = 8
+
+font-0 = tewi:size=12
+font-1 = Material Icons:size=12
+
+modules-left = pi
+modules-center = date
+modules-right =
+
+
+[module/2bwm]
+type = custom/script
+exec = ~/.bin/2bws.sh
+interval = 0.5
+format-prefix =
+format-padding = 1
+format-background = ${colors.bg}
+format-foreground = ${colors.fg}
+label-font = 1
+
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+interval = 1
+
+content  = <label-icon> <label-song>
+label-song = %{F#7d7579}%{F-}  %artist% - %title%
+label-song-padding = 1
+label-font = 3
+format-stopped  =  No songs playing
+format-offline = <label-offline>
+label-offline =  mpd is offline
+
+[module/date]
+type = custom/script
+exec = ~/.bin/date.sh
+interval = 1.0
+format-prefix =
+format-prefix-foreground = ${colors.icon}
+label-font = 1
+
+[module/pulse]
+type = custom/text
+content =  Audio
+content-foreground = ${colors.icon}
+content-background = $(colors.bg)
+click-left = pactl set-card-profile alsa_card.pci-0000_28_00.3 output:iec958-stereo
+click-right = pactl set-card-profile alsa_card.pci-0000_28_00.3 output:analog-stereo
+label-font = 3
+
+[module/vpn]
+type= custom/text
+content = 
+content-foreground = ${colors.icon}
+content-background = $(colors.bg)
+#content-padding = 1
+click-left = nmcli con up arch && notify-send 'Polybar' 'Vpn Running' --icon=dialog-information
+click-right = nmcli con down arch && notify-send 'Polybar' 'Vpn Shutting Down' --icon=dialog-information
+label-font = 3
+
+[module/screenshot]
+type = custom/text
+content =  Screenshot
+content-foreground = ${colors.icon}
+content-background = ${colors.bg}
+#content-padding = 1
+click-left = scrot -q 100 -e 'mv $f ~/Images/shots/' && notify-send 'Polybar' 'Screenshot taken' --icon=dialog-information
+label-font = 3
+
+[module/logout]
+type = custom/text
+content =  Logout
+content-foreground = ${colors.icon}
+content-background = ${colors.bg}
+#content-padding = 1
+click-left = notify-send 'Polybar' 'Loggin out in 5 seconds' --icon=dialog-information && sleep 5 && pkill x
+label-font = 3
+
+[module/weather]
+type = custom/script
+exec = ~/.config/polybar/polybar-forecast
+exec-if = ping openweathermap.org -c 1
+interval = 600
+
+[module/openweathermap-simple]
+type = custom/script
+exec = ~/.bin/openweathermap-simple.sh
+interval = 600
+label-font = 2
+
+[module/pi]
+type = custom/script
+exec = ~/.bin/pi.sh
+interval = 0.5
+content = 
+format-padding = 1
+format-background = ${colors.bg}
+format-foreground = ${colors.fg}
+label-font = 1
+

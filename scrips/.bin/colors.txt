@@ -1,0 +1,57 @@
+! URXVT COLORS
+! special
+*.foreground:   {{foreground-hex}}
+*.background:   {{background-hex}}
+*.cursorColor:  {{foreground-hex}}
+
+! black
+*.color0:       {{ansi-black-normal-hex}}
+*.color8:       {{ansi-black-bright-hex}}
+
+! red
+*.color1:       {{ansi-red-normal-hex}}
+*.color9:       {{ansi-red-bright-hex}}
+
+! green
+*.color2:       {{ansi-green-normal-hex}}
+*.color10:      {{ansi-green-bright-hex}}
+
+! yellow
+*.color3:       {{ansi-yellow-normal-hex}}
+*.color11:      {{ansi-yellow-bright-hex}}
+
+! blue
+*.color4:       {{ansi-blue-normal-hex}}
+*.color12:      {{ansi-blue-bright-hex}}
+
+! magenta
+*.color5:       {{ansi-magenta-normal-hex}}
+*.color13:      {{ansi-magenta-bright-hex}}
+
+! cyan
+*.color6:       {{ansi-cyan-normal-hex}}
+*.color14:      {{ansi-cyan-bright-hex}}
+
+! white
+*.color7:       {{ansi-white-normal-hex}}
+*.color15: {{ansi-white-bright-hex}}
+
+! XST COLORS
+st.foreground: {{foreground-hex}}
+st.background: {{background-hex}}
+st.color0: {{ansi-black-normal-hex}}
+st.color1: {{ansi-red-normal-hex}}
+st.color2: {{ansi-green-normal-hex}}
+st.color3: {{ansi-yellow-normal-hex}}
+st.color4: {{ansi-blue-normal-hex}}
+st.color5: {{ansi-magenta-normal-hex}}
+st.color6: {{ansi-cyan-normal-hex}}
+st.color7: {{ansi-white-normal-hex}}
+st.color8: {{ansi-black-bright-hex}}
+st.color9: {{ansi-red-bright-hex}}
+st.color10: {{ansi-green-bright-hex}}
+st.color11: {{ansi-yellow-bright-hex}}
+st.color12: {{ansi-blue-bright-hex}}
+st.color13: {{ansi-magenta-bright-hex}}
+st.color14: {{ansi-cyan-bright-hex}}
+st.color15: {{ansi-white-bright-hex}}

@@ -1,0 +1,37 @@
+# vim: ft=cfg
+[global]
+
+geometry = "300x5-30+55"
+alignment = left
+follow = none
+format = "%s\n%b"
+horizontal_padding = 20
+indicate_hidden = yes
+line_height = 5
+markup = no
+monitor = 0
+notification_height = 45
+padding = 20
+plain_text = no
+separator_height = 0
+shrink = no
+sort = yes
+word_wrap = no
+font = tewi 10
+browser = /usr/bin/firefox
+ignore_newline = no
+
+[urgency_low]
+foreground = "#e7e7e7"
+background = "#0a1614"
+timeout = 360
+
+[urgency_normal]
+foreground = "#e7e7e7"
+background = "#0a1614"
+timeout = 360
+
+[urgency_critical]
+foreground = "#e7e7e7"
+background = "#0a1614"
+timeout = 360
