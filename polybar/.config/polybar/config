@@ -1,8 +1,8 @@
 
 [colors]
-bg = #0a1614
-fg = #e7e7e7
-icon = #b1a495
+bg = #000000
+fg = #cfe6d7
+icon = #cfe6d7
 border = #faf6f5
 
 [bar/top]
@@ -28,7 +28,7 @@ module-margin-right = 1
 #offset-y = 0.5%
 #radius = 8
 
-font-0 = tewi:size=12
+font-0 = curie:size=12
 font-1 = Material Icons:size=12
 
 modules-left =  mpd
@@ -56,7 +56,7 @@ module-margin-right = 1
 #offset-y = 0.5%
 #radius = 8
 
-font-0 = tewi:size=12
+font-0 = curie:size=12
 font-1 = Material Icons:size=12
 
 modules-left = pi
@@ -83,7 +83,7 @@ port = 6600
 interval = 1
 
 content  = <label-icon> <label-song>
-label-song = %{F#7d7579}%{F-}  %artist% - %title%
+label-song = %{F#cfe6d7}%{F-}  %artist% - %title%
 label-song-padding = 1
 label-font = 3
 format-stopped  =  No songs playing

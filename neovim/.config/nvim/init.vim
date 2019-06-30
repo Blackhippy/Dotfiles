@@ -1,5 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'w0rp/ale'
 "Plug 'djdt/pyparens.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'dylanaraps/wal.vim'
@@ -53,7 +55,9 @@ set nobackup
 set nowritebackup
 set dir=/tmp
 set number
-
+set nonu
+set noru
+set ls=0
 " nerdtree
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'

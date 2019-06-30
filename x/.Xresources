@@ -1,56 +1,10 @@
 Xft.dpi: 96
-!URxvt*font: xft:Triskweline:size=12
-!URxvt*boldfont: xft:neep:bold:size=12
-URxvt*font: xft:tewi:size=12
-URxvt*boldfont: xft:tewi:bold:size=12
-URxvt.scrollBar: false
-URxvt.internalBorder: 50
-URxvt*dynamicColors: on
-URxvt*lineSpace: 2
-URxvt.geometry: 72x16
-
-! COLORS
-! special
-*.foreground:   #cb9494
-*.background:   #100f10
-*.cursorColor:  #cb9494
-
-! black
-*.color0:       #2b282a
-*.color8:       #454143
-
-! red
-*.color1:       #887472
-*.color9:       #a69391
-
-! green
-*.color2:       #75797e
-*.color10:      #93989e
-
-! yellow
-*.color3:       #7b787d
-*.color11:      #9b959d
-
-! blue
-*.color4:       #7d7579
-*.color12:      #9d9397
-
-! magenta
-*.color5:       #854d43
-*.color13:      #ac6659
-
-! cyan
-*.color6:       #884b41
-*.color14:      #b06357
-
-! white
-*.color7:       #e3d1ce
-*.color15: #faf6f5
-
+!****
 !st settings
+!****
 st.termname: st-256color
 st.shell: /bin/zsh
-st.font: tewi:pixelsize=12;
+st.font: curie:pixelsize=12;
 st.borderpx: 100
 st.cursorshape: 1;
 st.cursorthickness: 2
@@ -58,38 +12,51 @@ st.cursorblinkstyle: 1
 st.xfps: 120
 st.actionfps: 120
 st.mouseScrollLines: 1
-
 st.opacity: 255
-! XST COLORS
-st.foreground: #e7e7e7
-! st.background: #000000
-st.background: #0a1614
-st.color0: #193a34
-st.color1: #bd7860
-st.color2: #919191
-st.color3: #9a9184
-st.color4: #b1a495
-st.color5: #9b9387
-st.color6: #ad8765
-st.color7: #e8d4ca
-st.color8: #285e54
-st.color9: #d29b87
-st.color10: #adb2af
-st.color11: #b9b0a2
-st.color12: #d1c3b1
-st.color13: #bbb1a5
-st.color14: #c5a689
-st.color15: #fbf6f4
+
+!****
+!Colors
+!****
+#include ".Xresources.colors"
+! foreground
+*foreground: wht
+! background
+*background: #000000
+! blk
+*color0:  blk
+! gry
+*color8:  gry
+! red
+*color1:  red
+*color5:  red
+*color9:  red
+*color13: red
+! grn
+*color2:  grn
+*color3:  grn
+*color10: grn
+*color11: grn
+! blu
+*color4:  blu
+*color6:  blu
+*color12: blu
+*color14: blu
+! wht
+*color7:  wht
+*color15: wht
+
+!****
 !2bwm settings
+!****
 twobwm.border_width: 	   10
 twobwm.outer_border: 10
 twobwm.inverted_colors:    false
 twobwm.enable_compton: true
 
-twobwm.focus_color: ##faf6f5 !color7
-twobwm.unfocus_color: #faf6f5
-twobwm.fixed_color: #faf6f5
-twobwm.unkill_color: #faf6f5
-twobwm.outer_border_color: #faf6f5 !color4
-twobwm.fixed_unkill_color: #faf6f5
+twobwm.focus_color: wht !color7
+twobwm.unfocus_color: wht
+twobwm.fixed_color: wht
+twobwm.unkill_color: wht
+twobwm.outer_border_color: wht !color4
+twobwm.fixed_unkill_color: wht
 

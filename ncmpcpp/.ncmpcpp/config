@@ -1,57 +1,34 @@
 mpd_host = "localhost"
 mpd_port = "6600"
 
-# Display ..
-#song_list_format = " $0%n $1• $8%t $R$0%A "
-#song_columns_list_format = "(3)[]{}(92)[white]{t} (4)[red]{l}"
-song_columns_list_format = (50)[yellow]{ar} (50)[cyan]{t|f:Title}
-#song_status_format = " $3%t $0 "
-#playlist_display_mode = "classic" (classic/columns)
+playlist_display_mode = "classic"
+song_status_format = "$8%a$9 - $8%t$9"
+# song_list_format = "$2{%A}|{%a}$8 $4::$8 $5%t$8 {$R%b $8}"
+# song_list_format = "$2{%A}|{%a}$8 $4::$8 $5%t$8 {$R%b $8}"
+# song_list_format = "$6{%A}|{%a}$8 $4::$8 $3%t$8 {$R%b $4}"
+# song_list_format = "$2{%A}|{%a}$8 $4::$8 $5%t$8 {$R%l $8}"
+song_list_format = "$6{%A}|{%a}$8 $4::$8 $3%t$8 {$R%l $4}"
+# song_list_format = "$2{%A}|{%a}$8 $4::$8 $5%t$8"
+# song_list_format = "$2{%A}|{%a}$8 $4::$8 $5%t$8"
+# song_status_format = "$1%t $0%a"
+now_playing_prefix = "$2> "
+now_playing_suffix = "$2$/u$2"
 
-# Now Playing ..
-#now_playing_prefix = "$3>>"
-now_playing_suffix = "$8$/b"
-
-# Playlist ..
-browser_playlist_prefix = "$2 ♥ $0 "
-
-# Delays ..
-playlist_disable_highlight_delay = "1"
-message_delay_time= "1"
-
-# Progress Bar ..
-progressbar_look = "___"
-progressbar_color = "white"
-progressbar_elapsed_color = "blue"
-
-# Colors ..
-colors_enabled = "yes"
-empty_tag_color = "red"
-statusbar_color = "cyan"
-state_line_color = "black"
-state_flags_color = "green"
-main_window_color = "green"
-header_window_color = "black"
-
-# Misc ..
-display_bitrate = "yes"
-autocenter_mode = "yes"
-centered_cursor = "yes"
-titles_visibility = "no"
-#statusbar_visibility = "yes"
-statusbar_visibility = "no"
-empty_tag_marker=" -- ‼ -- "
-mouse_support = "no"
 header_visibility = "no"
-display_remaining_time = "no"
-ask_before_clearing_playlists = "no"
+autocenter_mode = "yes"
+statusbar_visibility = "no"
+main_window_highlight_color = "white"
 discard_colors_if_item_is_selected = "yes"
 
-# Visualizer ..
-visualizer_in_stereo = "yes"
-visualizer_sync_interval = "30"
-visualizer_output_name = "Pipe"
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_type = "wave" (spectrum/wave)
-visualizer_color = "green"
-visualizer_look = "∙▋"
+# Progressbar look
+progressbar_look = " "
+# progressbar_look = "⠒⠒⠐"
+progressbar_color = "black"
+progressbar_elapsed_color = "white"
+
+# Misc
+display_bitrate = "yes"
+enable_window_title = "no"
+follow_now_playing_lyrics = "yes"
+ignore_leading_the = "yes"
+
