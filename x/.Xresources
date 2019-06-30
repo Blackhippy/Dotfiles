@@ -4,7 +4,8 @@ Xft.dpi: 96
 !****
 st.termname: st-256color
 st.shell: /bin/zsh
-st.font: curie:pixelsize=12;
+st.font: bpmono:pixelsize=12;
+!st.font: curie:pixelsize=12;
 st.borderpx: 100
 st.cursorshape: 1;
 st.cursorthickness: 2
