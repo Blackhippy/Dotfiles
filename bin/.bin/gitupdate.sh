@@ -10,5 +10,5 @@ read CHANGE_MSG
 git commit -am "${CHANGE_MSG}"
 notify-send 'Git Update' 'Setup updating.'
 git config credential.helper store
-git push origin master
+git push origin master -f
 notify-send "Git Update" "Setup Updated"
