@@ -2,21 +2,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'w0rp/ale'
 "Plug 'djdt/pyparens.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'dylanaraps/wal.vim'
-Plug 'ntpeters/vim-better-whitespace'
-"Plug 'raimondi/delimitmate'
 Plug 'airblade/vim-gitgutter'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'roxma/nvim-yarp'
-"Plug 'roxma/vim-hug-neovim-rpc'
-"Plug 'zchee/deoplete-jedi'
 Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
-Plug 'https://github.com/ap/vim-css-color'
-Plug 'https://github.com/hail2u/vim-css3-syntax'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 

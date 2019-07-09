@@ -4,8 +4,7 @@ Xft.dpi: 96
 !****
 st.termname: st-256color
 st.shell: /bin/zsh
-st.font: bpmono:pixelsize=12;
-!st.font: curie:pixelsize=12;
+st.font: spleen:pixelsize=16;
 st.borderpx: 100
 st.cursorshape: 1;
 st.cursorthickness: 2
@@ -54,10 +53,10 @@ twobwm.outer_border: 10
 twobwm.inverted_colors:    false
 twobwm.enable_compton: true
 
-twobwm.focus_color: wht !color7
-twobwm.unfocus_color: wht
-twobwm.fixed_color: wht
-twobwm.unkill_color: wht
-twobwm.outer_border_color: wht !color4
-twobwm.fixed_unkill_color: wht
+twobwm.focus_color: #000000 !color7
+twobwm.unfocus_color: #000000
+twobwm.fixed_color: #000000
+twobwm.unkill_color: #000000
+twobwm.outer_border_color: #000000 !color4
+twobwm.fixed_unkill_color: #000000
 
