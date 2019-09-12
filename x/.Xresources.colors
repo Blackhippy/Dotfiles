@@ -1,8 +1,7 @@
-! new6
-! dark
-#define blk #191919
-#define gry #7f7f7f
-#define red #72bf64
-#define grn #73bf95
-#define blu #42b7bf
-#define wht #cfe6d7
+#define bg #010203
+#define blk #3F3F39
+#define gry #3F3F39
+#define red #918685
+#define grn #9EA6A1
+#define blu #9B969D
+#define wht #C5BAB6
