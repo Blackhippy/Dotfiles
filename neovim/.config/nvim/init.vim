@@ -2,6 +2,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'axvr/photon.vim'
+Plug 'Yggdroot/indentLine'
 "Plug 'djdt/pyparens.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'dylanaraps/wal.vim'
 Plug 'airblade/vim-gitgutter'
@@ -75,3 +78,7 @@ endif
  let g:deoplete= 1
 " tabbar
 nmap <F8> :TagbarToggle<CR>
+
+" indentLine
+let g:indentLine_setColors = 0
+let g:indentLine_char      = '┆'

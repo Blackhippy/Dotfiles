@@ -1,13 +1,13 @@
 # vim: ft=cfg
 [global]
 
-geometry = "350x10-10+40"
+geometry = "300x8-20+20"
 alignment = left
 follow = none
 #format = "%s\n%b"
 format = "%a <b>%s</b>\n%b"
 icon_position = left
-max_icon_size = 50
+max_icon_size = 60
 show_icons = left
 horizontal_padding = 20
 indicate_hidden = yes
@@ -16,26 +16,27 @@ markup = no
 monitor = 0
 notification_height = 45
 padding = 20
+horizontal_padding = 20
 plain_text = no
 separator_height = 0
 shrink = no
 sort = yes
 word_wrap = yes
-font = hermit 10
+font = PragmataPro 12
 browser = /usr/bin/firefox
 ignore_newline = no
 
 [urgency_low]
-foreground = "#cfe6d7"
-background = "#000000"
+foreground = "#C5BAB6"
+background = "#010203"
 timeout = 360
 
 [urgency_normal]
-foreground = "#cfe6d7"
-background = "#000000"
+foreground = "#C5BAB6"
+background = "#010203"
 timeout = 360
 
 [urgency_critical]
-foreground = "#cfe6d7"
-background = "#000000"
+foreground = "#C5BAB6"
+background = "#010203"
 timeout = 360

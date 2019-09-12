@@ -7,5 +7,6 @@ autocenter_mode = yes
 header_visibility = no
 statusbar_visibility = no
 titles_visibility = no
-progressbar_look = "___"
+progressbar_look = 
 song_columns_list_format = (50)[yellow]{ar} {::} (50)[cyan]{t|f:Title}
+display_bitrate = "yes"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-h=$(TZ=America/Chicago’ date +"%l")
+h=$(date +"%l")
 m=$(date +"%M")
 d=$(date +"%a")
 mm=$((60-m))
