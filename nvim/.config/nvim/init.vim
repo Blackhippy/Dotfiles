@@ -1,4 +1,5 @@
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'luochen1990/rainbow'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -84,3 +85,5 @@ endif
  let g:deoplete= 1
 " tabbar
 nmap <F8> :TagbarToggle<CR>
+
+let g:rainbow_active = 1

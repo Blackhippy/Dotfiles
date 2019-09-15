@@ -27,16 +27,16 @@ browser = /usr/bin/firefox
 ignore_newline = no
 
 [urgency_low]
-foreground = "#C5BAB6"
-background = "#010203"
+foreground = "#a84034"
+background = "#020003"
 timeout = 360
 
 [urgency_normal]
-foreground = "#C5BAB6"
-background = "#010203"
+foreground = "#a84034"
+background = "#020003"
 timeout = 360
 
 [urgency_critical]
-foreground = "#C5BAB6"
-background = "#010203"
+foreground = "#a84034"
+background = "#020003"
 timeout = 360
