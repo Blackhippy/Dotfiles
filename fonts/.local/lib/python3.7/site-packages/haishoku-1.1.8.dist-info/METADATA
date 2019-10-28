@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: haishoku
+Version: 1.1.8
+Summary: A development tool for grabbing the dominant color or representative color palette from an image.
+Home-page: https://github.com/LanceGin/haishoku
+Author: lancegin
+Author-email: gin.lance.inside@hotmail.com
+License: MIT
+Keywords: palette dominant-colors development python3 design-tools
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: pillow
+
+Haishoku is a development tool for grabbing the dominant color or representative color palette from an image, it depends on Python3 and Pillow.
+
+

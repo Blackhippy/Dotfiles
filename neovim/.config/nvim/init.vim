@@ -1,21 +1,17 @@
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'luochen1990/rainbow'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+Plug 'Shougo/neoinclude.vim'
+Plug 'jsfaint/coc-neoinclude'
 Plug 'Yggdroot/indentLine'
-Plug 'axvr/photon.vim'
-Plug 'Yggdroot/indentLine'
-"Plug 'djdt/pyparens.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'dylanaraps/wal.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'nerdypepper/vim-colors-plain'
 call plug#end()
 
 set t_Co=256
-colorscheme wal
+colorscheme plain
 
 filetype indent plugin on
 syntax on
@@ -52,10 +48,37 @@ set number
 set nonu
 set noru
 set ls=0
-" nerdtree
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-map <F1> :NERDTreeToggle<CR>
+set shortmess+=c
+set signcolumn=yes
+
+
+" coc
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Or use `complete_info` if your vim support it, like:
+" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
 
 " vim-better-whitespace
 let g:better_whitespace_enabled=1
@@ -71,14 +94,14 @@ endif
 " let g:gitgutter_sign_modified = ''
 " let g:gitgutter_sign_removed = ''
 
-" deoplete
- let g:deoplete#enable_at_startup = 1
- let g:neotags#python#order = 'mfc'
- let g:python3_host_prog = '/usr/bin/python3.7'
- let g:deoplete= 1
-" tabbar
-nmap <F8> :TagbarToggle<CR>
-
 " indentLine
-let g:indentLine_setColors = 0
-let g:indentLine_char      = '┆'
+ "let g:indentLine_setColors = 0
+ let g:indentLine_char      = '┊'
+" let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_bgcolor_term = 0
+let g:indentLine_color_term = 0
+
+" rainbow
+let g:rainbow_active = 1
+
+autocmd CursorHold * silent call CocActionAsync('highlight')

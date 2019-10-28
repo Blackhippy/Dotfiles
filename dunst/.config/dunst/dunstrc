@@ -1,7 +1,7 @@
 # vim: ft=cfg
 [global]
 
-geometry = "300x8-20+20"
+geometry = "300x5-30+55"
 alignment = left
 follow = none
 #format = "%s\n%b"
@@ -22,21 +22,21 @@ separator_height = 0
 shrink = no
 sort = yes
 word_wrap = yes
-font = PragmataPro 12
+font = Sometype Mono 9
 browser = /usr/bin/firefox
 ignore_newline = no
 
 [urgency_low]
-foreground = "#a84034"
+foreground = "#cea192"
 background = "#020003"
 timeout = 360
 
 [urgency_normal]
-foreground = "#a84034"
-background = "#020003"
+foreground = "#cea192"
+background = "#020003" 
 timeout = 360
 
 [urgency_critical]
-foreground = "#a84034"
-background = "#020003"
+foreground = "#cea192"
+background = "#020003" 
 timeout = 360

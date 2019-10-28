@@ -1,0 +1,3 @@
+[console_scripts]
+bum = bum.__main__:main
+

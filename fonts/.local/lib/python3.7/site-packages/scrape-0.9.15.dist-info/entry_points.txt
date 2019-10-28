@@ -1,0 +1,3 @@
+[console_scripts]
+scrape = scrape.scrape:command_line_runner
+

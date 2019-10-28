@@ -1,73 +1,53 @@
 # vim: ft=cfg
 [colors]
-bg = #010203
+bg = #020003
 fg = ${xrdb:color1:#777}
 icon = ${xrdb:color4:#777}
 border = #f7f7f7
 
-[bar/ws]
-width            = 70
-height           = 50
-offset-x         = 20
-offset-y         = 1010
-background       = ${colors.bg}
-foreground       = ${colors.fg}
-modules-left     =
-modules-center   = workspace
-modules-right    =
-padding          = 3
-radius           = 0
-font-0 = PragmataPro:size=12:antialias=true:autohint=true;2
-font-1 = Material Icons:size=12
+[bar/top]
+monitor = HDMI-A-0
+bottom = false
+background = ${colors.bg}
+foreground = ${colors.fg}
+#border-bottom-size = 10
+#border-bottom-color = ${colors.border}
+padding-left = 3
+padding-right =4
+height = 30
+module-margin-left = 1
+module-margin-right = 1
 
-[bar/time]
-width            = 260
-height           = 50
-offset-x         = 100
-offset-y         = 1010
-background       = ${colors.bg}
-foreground       = ${colors.fg}
-modules-left     =
-modules-center   = time weather
-modules-right    =
-padding          = 3
-font-0 = PragmataPro:size=12:antialias=true:autohint=true;2
+font-0 = Sometype Mono:pixelsize=12:antialias=true:autohint=true;2
 font-1 = Material Icons:size=12;2
 
-[bar/stat]
-width            = 220
-height           = 50
-offset-x         = 2300
-offset-y         = 1010
-background       = ${colors.bg}
-foreground       = ${colors.fg}
-modules-left     =
-modules-center   = up pulse vpn li
-modules-right    =
-padding          = 3
-font-0 = PragmataPro:size=12:antialias=true:autohint=true;2
-font-1 = Material Icons:size=12
+modules-left =  mpd
+modules-center = 2bwm
+modules-right =  pulse screenshot logout
 
-[module/time]
-type                     = internal/date
-interval                 = 1.0
-format-padding           = 1
-label-foreground        = ${colors.fg}
-label-background        = ${colors.bg}
-date = %d/%m
-time = %I:%M
-label = %date% %time%
-label-font = 0
-font-1 = Material Icons:size=12
+[bar/bottom]
 
-[module/workspace]
-type              = custom/script
-interval          = 0.01
-exec              = echo $(( $(xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //') + 1))
-format-padding    = 2
-format-font       = 1
-click-left = scrot -q 100 -e 'mv $f ~/Images/shots/' && notify-send 'Polybar' 'Screenshot taken' --icon=dialog-information
-click-right = notify-send 'Polybar' 'Loggin out in 5 seconds' --icon=dialog-information && sleep 5 && pkill x
+monitor = HDMI-A-0
+bottom = true
+background = ${colors.bg}
+foreground = ${colors.fg}
+#border-top-size = 10
+#border-top-color = ${colors.border}
+
+padding-left = 3
+padding-right =4
+height = 30
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = Sometype Mono:pixelsize=12:antialias=true:autohint=true;2
+font-1 = Material Icons:size=12;2
+font-2 = Weather Icons:size=12;2
+
+modules-left = pi
+modules-center = date
+modules-right = weather
+
 
 [module/2bwm]
 type = custom/script
@@ -77,40 +57,67 @@ format-prefix =
 format-padding = 1
 format-background = ${colors.bg}
 format-foreground = ${colors.fg}
-label-font = 1
-click-left = scrot -q 100 -e 'mv $f ~/Images/shots/' && notify-send 'Polybar' 'Screenshot taken'
-click-right = notify-send 'Polybar' 'Loggin out in 5 seconds' --icon=dialog-information && sleep 5 && pkill x
-
-[module/weather]
-type              = custom/script
-interval          = 3600.0
-exec              = curl -s "wttr.in/Houston?format=3"
-format-padding    = 2
-format-font       = 0
+label-font = 0
 
 
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+interval = 1
+
+content  = <label-icon> <label-song>
+label-song = %artist% - %title%
+label-song-padding = 1
+label-font = 3
+format-stopped  =  No songs playing
+format-offline = <label-offline>
+label-offline =  mpd is offline
+
+[module/date]
+type = custom/script
+exec = ~/.bin/date.sh
+interval = 1.0
+format-foreground = ${colors.fg}
+label-font = 0
 
 [module/pulse]
 type = custom/text
-content-prefix =
-content =  
-content-prefix-foreground = ${colors.icon}
+content =  Audio
 content-foreground = ${colors.fg}
 content-background = $(colors.bg)
-content-prefix-padding = 1
 click-left = pactl set-card-profile alsa_card.pci-0000_28_00.3 output:iec958-stereo
 click-right = pactl set-card-profile alsa_card.pci-0000_28_00.3 output:analog-stereo
+label-font = 0
 
 [module/vpn]
 type= custom/text
 content = 
 content-foreground = ${colors.fg}
 content-background = $(colors.bg)
-content-padding = 1
+#content-padding = 1
 click-left = nmcli con up arch && notify-send 'Polybar' 'Vpn Running' --icon=dialog-information
 click-right = nmcli con down arch && notify-send 'Polybar' 'Vpn Shutting Down' --icon=dialog-information
 label-font = 3
 
+[module/screenshot]
+type = custom/text
+content = Screenshot
+content-foreground = ${colors.fg}
+content-background = ${colors.bg}
+#content-padding = 1
+click-left = scrot -q 100 -e 'mv $f ~/Images/shots/' && notify-send 'Polybar' 'Screenshot taken'
+label-font = 0
+
+[module/logout]
+type = custom/text
+content =  Logout
+content-foreground = ${colors.fg}
+content-background = ${colors.bg}
+#content-padding = 1
+click-left = notify-send 'Polybar' 'Loggin out in 5 seconds' --icon=dialog-information && sleep 5 && pkill x
+label-font = 0
 
 [module/pi]
 type = custom/script
@@ -119,19 +126,11 @@ interval = 0.5
 content = 
 format-padding = 1
 format-background = ${colors.bg}
-format-foreground = ${colors.fg}
 label-font = 0
 
-
-[module/up]
-type = custom/script
-exec = ~/.bin/up.sh
-interval = 10
-
-[module/li]
-type= custom/text
-content = 
-content-foreground = ${colors.fg}
-content-background = $(colors.bg)
-content-padding = 1
-
+[module/weather]
+type              = custom/script
+interval          = 3600.0
+exec              = curl -s "wttr.in/Houston?format=3"
+format-padding    = 2
+format-font       = 0

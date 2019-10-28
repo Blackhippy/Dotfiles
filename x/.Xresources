@@ -10,8 +10,9 @@ Xft.lcdfilter: lcddefault
 !****
 st.termname: st-256color
 st.shell: /bin/zsh
-st.font:PragmataPro:pixelsize=16:antialias=true:autohint=true;
+st.font:Sometype Mono:pixelsize=15:antialias=true:autohint=true;
 st.bold_font: 0
+!st.bold_font: Monoid Tight:pixelsize=12:Bold:antialias=true:autohint=true;
 !st.bold_font: Calling Code:pixelsize=12;
 st.borderpx: 100
 st.cursorshape: 1;
@@ -23,6 +24,7 @@ st.mouseScrollLines: 1
 st.opacity: 255
 st.chscale: 1.0
 st.cwscale: 1.0
+
 !****
 !Colors
 !****
@@ -40,9 +42,9 @@ st.cwscale: 1.0
 
 ! red
 *color1:  red
-*color5:  red
+*color5:  blu
 *color9:  red
-*color13: red
+*color13: blu
 
 ! grn
 *color2:  grn
@@ -59,20 +61,19 @@ st.cwscale: 1.0
 ! wht
 *color7:  wht
 *color15: wht
-!****
 !2bwm settings
 !****
 !twobwm.border_width: 1
 !twobwm.outer.width: 8
-twobwm.border_width: 	   0
+twobwm.border_width: 10
 twobwm.outer_border: 0
 twobwm.inverted_colors:    false
 twobwm.enable_compton: true
 
-twobwm.focus_color: red
-twobwm.unfocus_color: red
-twobwm.fixed_color: red
-twobwm.unkill_color: red
-twobwm.outer_border_color: red
-twobwm.fixed_unkill_color: red
+twobwm.focus_color: wht
+twobwm.unfocus_color: blk
+twobwm.fixed_color:
+twobwm.unkill_color:
+twobwm.outer_border_color:
+twobwm.fixed_unkill_color:
 
