@@ -10,8 +10,8 @@ Xft.lcdfilter: lcddefault
 !****
 st.termname: st-256color
 st.shell: /bin/zsh
-st.font:Sometype Mono:pixelsize=15:antialias=true:autohint=true;
-st.bold_font: 0
+st.font:Victor Mono:Italic:pixelsize=15:antialias=true:autohint=true;
+st.bold_font: Victor Mono:Bold Italic:pixelsize=15:antialias=true:autohint=true;
 !st.bold_font: Monoid Tight:pixelsize=12:Bold:antialias=true:autohint=true;
 !st.bold_font: Calling Code:pixelsize=12;
 st.borderpx: 100
@@ -34,11 +34,12 @@ st.cwscale: 1.0
 
 ! background
 *background: bg
+
 ! blk
 *color0:  blk
 
 ! gry
-*color8:  gry
+*color8:  cyn
 
 ! red
 *color1:  red
@@ -63,15 +64,15 @@ st.cwscale: 1.0
 *color15: wht
 !2bwm settings
 !****
-!twobwm.border_width: 1
-!twobwm.outer.width: 8
-twobwm.border_width: 10
+!twobwm.border_width: 10
+!twobwm.outer.width: 0
+twobwm.border_width: 0
 twobwm.outer_border: 0
 twobwm.inverted_colors:    false
 twobwm.enable_compton: true
 
-twobwm.focus_color: wht
-twobwm.unfocus_color: blk
+twobwm.focus_color: #f7f7f7
+twobwm.unfocus_color: #f7f7f7
 twobwm.fixed_color:
 twobwm.unkill_color:
 twobwm.outer_border_color:

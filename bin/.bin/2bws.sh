@@ -12,8 +12,8 @@ OCCUPIED=∙
 UNOCCUPIED=⋅
 
 # colors
-fg="#fef7ff"
-fg1="#cea192"
+fg="#7fd1ae"
+fg1="#C2858A"
 
 #  print workspaces to stdout
 draw() {

@@ -1,4 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'https://github.com/NerdyPepper/vim-colors-plain.git'
+Plug 'mhinz/vim-janah'
 Plug 'luochen1990/rainbow'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shougo/neoinclude.vim'
@@ -7,11 +9,11 @@ Plug 'Yggdroot/indentLine'
 Plug 'dylanaraps/wal.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'nerdypepper/vim-colors-plain'
 call plug#end()
 
 set t_Co=256
-colorscheme plain
+autocmd ColorScheme janah highlight LineNr ctermbg=256
+colorscheme wal
 
 filetype indent plugin on
 syntax on
@@ -98,10 +100,10 @@ endif
  "let g:indentLine_setColors = 0
  let g:indentLine_char      = '┊'
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-let g:indentLine_bgcolor_term = 0
-let g:indentLine_color_term = 0
+let g:indentLine_bgcolor_term = 256
+let g:indentLine_color_term = 1
 
 " rainbow
-let g:rainbow_active = 1
+let g:rainbow_active = 0
 
 autocmd CursorHold * silent call CocActionAsync('highlight')

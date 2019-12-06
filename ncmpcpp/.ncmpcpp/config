@@ -21,7 +21,8 @@ main_window_highlight_color = "white"
 discard_colors_if_item_is_selected = "yes"
 
 # Progressbar look
-progressbar_look = "▃▃▃"
+#progressbar_look = ""
+progressbar_look = "   "
 progressbar_color = "black"
 progressbar_elapsed_color = "white"
 
@@ -30,4 +31,13 @@ display_bitrate = "yes"
 enable_window_title = "no"
 follow_now_playing_lyrics = "yes"
 ignore_leading_the = "yes"
+
+# visualizer
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "12"
+#visualizer_type = "wave" (spectrum/wave)
+visualizer_type = "spectrum" (spectrum/wave)
+visualizer_in_stereo = "yes"
+visualizer_look = "+|"
 

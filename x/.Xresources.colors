@@ -1,7 +1,7 @@
-#define bg  #020003
-#define blk #020003
-#define gry #9eadbd
-#define red #c78162
-#define grn #9fccbe
-#define blu #9da3e1
-#define wht #e8f3f1
+#define bg   #020003
+#define blk  #192531
+#define cyn  #192531
+#define red  #C2858A
+#define grn  #7fd1ae
+#define blu  #A2AFBF
+#define wht  #DBDCD9

@@ -1,7 +1,7 @@
 # vim: ft=cfg
 [colors]
 bg = #020003
-fg = ${xrdb:color1:#777}
+fg = ${xrdb:color7:#777}
 icon = ${xrdb:color4:#777}
 border = #f7f7f7
 
@@ -10,16 +10,17 @@ monitor = HDMI-A-0
 bottom = false
 background = ${colors.bg}
 foreground = ${colors.fg}
-#border-bottom-size = 10
-#border-bottom-color = ${colors.border}
+border-bottom-size = 5
+border-bottom-color = ${colors.border}
 padding-left = 3
 padding-right =4
-height = 30
+height = 35
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Sometype Mono:pixelsize=12:antialias=true:autohint=true;2
-font-1 = Material Icons:size=12;2
+font-0 = Victor Mono:Italic:pixelsize=12:antialias=true:autohint=true;2
+#font-0 = Code Saver:pixelsize=10:antialias=true:autohint=true;2
+font-1 = Material Icons:size=14;5
 
 modules-left =  mpd
 modules-center = 2bwm
@@ -31,16 +32,17 @@ monitor = HDMI-A-0
 bottom = true
 background = ${colors.bg}
 foreground = ${colors.fg}
-#border-top-size = 10
-#border-top-color = ${colors.border}
+border-top-size = 5
+border-top-color = ${colors.border}
 
 padding-left = 3
 padding-right =4
-height = 30
+height = 35
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Sometype Mono:pixelsize=12:antialias=true:autohint=true;2
+font-0 = Victor Mono:Italic:pixelsize=12:antialias=true:autohint=true;2
+#font-0 = Code Saver:pixelsize=12:antialias=true:autohint=true;2
 font-1 = Material Icons:size=12;2
 font-2 = Weather Icons:size=12;2
 
@@ -66,26 +68,35 @@ type = internal/mpd
 host = 127.0.0.1
 port = 6600
 interval = 1
-
-content  = <label-icon> <label-song>
-label-song = %artist% - %title%
+format-online = <icon-prev><icon-play><icon-pause><icon-next><label-song>
+#content  = <label-icon> <label-song>
+icon-prev-foreground = ${xrdb:color4:#777}
+icon-play-foreground = ${xrdb:color1:#777}
+icon-pause-foreground = ${xrdb:color1:#777}
+icon-next-foreground = ${xrdb:color3:#777}
+label-song = %artist% : %title%
 label-song-padding = 1
-label-font = 3
+label-font = 1
 format-stopped  =  No songs playing
 format-offline = <label-offline>
 label-offline =  mpd is offline
+icon-play = 
+icon-pause = 
+icon-stop = ⏹
+icon-prev = 
+icon-next = 
 
 [module/date]
 type = custom/script
 exec = ~/.bin/date.sh
 interval = 1.0
-format-foreground = ${colors.fg}
+format-foreground = ${xrdb:color7:#777}
 label-font = 0
 
 [module/pulse]
 type = custom/text
 content =  Audio
-content-foreground = ${colors.fg}
+content-foreground = ${xrdb:color5:#777}
 content-background = $(colors.bg)
 click-left = pactl set-card-profile alsa_card.pci-0000_28_00.3 output:iec958-stereo
 click-right = pactl set-card-profile alsa_card.pci-0000_28_00.3 output:analog-stereo
@@ -113,7 +124,7 @@ label-font = 0
 [module/logout]
 type = custom/text
 content =  Logout
-content-foreground = ${colors.fg}
+content-foreground = ${xrdb:color3:#777}
 content-background = ${colors.bg}
 #content-padding = 1
 click-left = notify-send 'Polybar' 'Loggin out in 5 seconds' --icon=dialog-information && sleep 5 && pkill x
@@ -124,9 +135,10 @@ type = custom/script
 exec = ~/.bin/pi.sh
 interval = 0.5
 content = 
-format-padding = 1
+format-content-padding = 1
 format-background = ${colors.bg}
-label-font = 0
+format-content-foreground = #f7f7f7
+format-content-overline = #FFDDDD
 
 [module/weather]
 type              = custom/script
@@ -134,3 +146,4 @@ interval          = 3600.0
 exec              = curl -s "wttr.in/Houston?format=3"
 format-padding    = 2
 format-font       = 0
+format-foreground = ${xrdb:color7:#777}
