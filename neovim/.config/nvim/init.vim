@@ -1,19 +1,24 @@
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'https://github.com/NerdyPepper/vim-colors-plain.git'
-Plug 'mhinz/vim-janah'
-Plug 'luochen1990/rainbow'
+Plug 'xero/blaquemagick.vim'
+Plug 'fehawen/sl.vim'
+Plug 'fehawen/cs.vim'
+Plug 'Kyle-Thompson/xresources-colors.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shougo/neoinclude.vim'
-Plug 'jsfaint/coc-neoinclude'
-Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine' "Displays the indention levels with thin vertical lines
 Plug 'dylanaraps/wal.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-call plug#end()
+Plug 'godlygeek/tabular' "Vim script for text filtering and alignment 
+Plug 'dense-analysis/ale' "Asynchronous Lint Engine
+Plug 'sheerun/vim-polyglot' "A solid language pack for Vim
+Plug 'Vimjas/vim-python-pep8-indent' "nicer Python indentation style
+Plug 'vim-python/python-syntax' "Enhanced version of the original Vim 6.1 Python syntax highlighting
+Plug 'jsfaint/coc-neoinclude' "Intellisense engine
 
-set t_Co=256
-autocmd ColorScheme janah highlight LineNr ctermbg=256
-colorscheme wal
+call plug#end()
+set t_Co=8
+colorscheme cs
 
 filetype indent plugin on
 syntax on
@@ -27,16 +32,17 @@ set linebreak
 set breakindent
 set backspace=indent,eol,start
 set expandtab
-set softtabstop=0
 set shiftwidth=4
 set tabstop=4
+set softtabstop=4
 set shiftround
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 set noruler
-set nonumber
+"set nonumber
+set number
 set mouse=a
 set shortmess=atI
 set hidden
@@ -52,8 +58,27 @@ set noru
 set ls=0
 set shortmess+=c
 set signcolumn=yes
+set foldmethod=indent   
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 
 
+let mapleader=","
+
+""Plug nerdcommenter
+let g:NERDCompactSexyComs = 1
+let g:NERDToggleCheckAllLines = 1
+
+"ale
+let g:ale_linters = {
+\    'python': ['flake8', 'pylint']
+\}
+let g:ale_fixers = {
+\    'python': ['yapf'],
+\}
+nmap <F10> :ALEFix<CR>
+let g:ale_fix_on_save = 1
 " coc
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -98,12 +123,9 @@ endif
 
 " indentLine
  "let g:indentLine_setColors = 0
- let g:indentLine_char      = '┊'
+ let g:indentLine_char      = '│'
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_bgcolor_term = 256
-let g:indentLine_color_term = 1
-
-" rainbow
-let g:rainbow_active = 0
+let g:indentLine_color_term = 7
 
 autocmd CursorHold * silent call CocActionAsync('highlight')

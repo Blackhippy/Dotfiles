@@ -56,32 +56,28 @@ else
 fi
 zmodload -i zsh/complist
 
-# Theme
-SPACESHIP_PROMPT_ORDER=(
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  hg            # Mercurial section (hg_branch  + hg_status)
-  exec_time     # Execution time
-  line_sep      # Line break
-  vi_mode       # Vi-mode indicator
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_CHAR_SYMBOL="❯"
-SPACESHIP_CHAR_SUFFIX=" "
-
-# Alias
+#Alias
 alias cat="bat --paging=never --style=plain"
 alias joplin=".joplin/Joplin.AppImage"
 alias ls="exa"
 alias la="exa -la"
 alias vim="nvim"
 alias reload="xrdb -load ~/.Xresources"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+#YAY
+alias install='yay -S'
+alias remove='yay sudo pacman -Rs'
+alias update='yay -Syu'
+alias search='yay -Ss'
+alias cleanup='yay -Rns $(yay -Qtdq)'
+alias pkgcnt='yay -Q | wc -l'
 
 #Exports
 export PATH="/usr/local/bin:$PATH"
 export PATH="/home/hippi/.local/bin:$PATH"
+export GOPATH="$PATH:$HOME/go/bin"
+

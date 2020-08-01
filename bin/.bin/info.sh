@@ -56,8 +56,10 @@ CTEXT="$WHT" # color of entry text
 #
 # examples:
 #
+mkent "OS" "Arch Linux"
 mkent "WM" "2bwm"
-mkent "Font" "Cascadia Code"
+mkent "Font" "Victor Mono"
+mkent "Kernel" "Linux 5.4.1"
 mkent "Stamp" "$(date '+%d %b')"
  
 # find the center of the screen

@@ -1,34 +1,19 @@
 #!/usr/bin/env bash
 # display workspace status
 # requires wmctrl
+wht=$(xrdb -query|awk '/\*color7:/ {print $2}'|cut -d '#' -f2)
+gnc=""
+SE2P=" "
+red=$(xrdb -query|awk '/\*color2:/ {print $2}'|cut -d '#' -f2)
+glycrnt=""
+cur=$(xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}')
+total=$(xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}')
 
-# get the current workspace
-ws=$( xprop -root _NET_CURRENT_DESKTOP | sed -e 's/_NET_CURRENT_DESKTOP(CARDINAL) = //' )
+for w in `seq 0 $((cur- 1))`; do line="$line"$SE2P"%{F$a$wht}$gnc"$SE2P""; done
+line="$line%{F$a$red}$glycrnt"$SE2P""
+for w in `seq $((cur + 2)) $total`; do line="$line"$SE2P"%{F$a$wht}$glycrnt"$SE2P""; done
 
-# icons
+echo $line%{F-}
 
-CURRENT=∙
-OCCUPIED=∙
-UNOCCUPIED=⋅
 
-# colors
-fg="#7fd1ae"
-fg1="#C2858A"
 
-#  print workspaces to stdout
-draw() {
-    for i in {0..5}; do
-        # get the number of windows in each workspace
-        windows=$( wmctrl -l | cut -d ' ' -f3 | grep $i | wc -l )
-
-        if [[ $i -eq $ws ]]
-        then
-            # current workspace
-            echo -ne "%{F$fg} "
-        else
-            echo -ne "%{F$fg1} "
-        fi
-    done
-}
-
-draw

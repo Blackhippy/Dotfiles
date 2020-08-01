@@ -1,42 +1,64 @@
-# vim: ft=cfg
+#       ██                            ██                 
+#      ░██                           ░██                 
+#      ░██ ██   ██ ███████   ██████ ██████ ██████  █████ 
+#   ██████░██  ░██░░██░░░██ ██░░░░ ░░░██░ ░░██░░█ ██░░░██
+#  ██░░░██░██  ░██ ░██  ░██░░█████   ░██   ░██ ░ ░██  ░░ 
+# ░██  ░██░██  ░██ ░██  ░██ ░░░░░██  ░██   ░██   ░██   ██
+# ░░██████░░██████ ███  ░██ ██████   ░░██ ░███   ░░█████ 
+#  ░░░░░░  ░░░░░░ ░░░   ░░ ░░░░░░     ░░  ░░░     ░░░░░  
+#
 [global]
-
-geometry = "300x5-30+55"
-alignment = left
-follow = none
-#format = "%s\n%b"
-format = "%a <b>%s</b>\n%b"
-icon_position = left
-max_icon_size = 60
-show_icons = left
-horizontal_padding = 20
-indicate_hidden = yes
-line_height = 5
-markup = no
-monitor = 0
-notification_height = 45
-padding = 20
-horizontal_padding = 20
-plain_text = no
-separator_height = 0
-shrink = no
+font = Rec Mono Duotone 10  
+allow_markup = yes
+format = "%s %b"
 sort = yes
-word_wrap = yes
-font = Sometype Mono 9
+indicate_hidden = yes
+alignment = right
+bounce_freq = 0
+show_age_threshold = 60
+word_wrap = no
+ignore_newline = yes
+geometry = "1280x18-30+55"
+shrink = yes
+transparency = 0
+idle_threshold = 120
+monitor = 0
+follow = mouse
+sticky_history = yes
+history_length = 100
+show_indicators = yes
+line_height = 20
+separator_height = 0
+padding = 4
+horizontal_padding = 6
+separator_color = frame
+startup_notification = false
+dmenu = /home/nxll/menu -p dunst:
 browser = /usr/bin/firefox
-ignore_newline = no
+icon_position = off
+icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+
+[frame]
+width = 0
+color = "#262624"
+
+[shortcuts]
+close = ctrl+space
+close_all = ctrl+shift+space
+history = ctrl+grave
+context = ctrl+shift+period
 
 [urgency_low]
-foreground = "#cea192"
-background = "#020003"
+foreground = "#885152"
+background = "#000000"
 timeout = 360
 
 [urgency_normal]
-foreground = "#cea192"
-background = "#020003" 
+foreground = "#885152"
+background = "#000000" 
 timeout = 360
-
 [urgency_critical]
-foreground = "#cea192"
-background = "#020003" 
+foreground = "#885152" 
+background = "#000000"
 timeout = 360
+# vim: ft=cfg

@@ -1,6 +1,7 @@
 mpd_host = "localhost"
 mpd_port = "6600"
 
+execute_on_song_change="~/src/ncmpcpp-ueberzug/ncmpcpp_cover_art.sh"
 playlist_display_mode = "classic"
 song_status_format = "$8%a$9 - $8%t$9"
 # song_list_format = "$2{%A}|{%a}$8 $4::$8 $5%t$8 {$R%b $8}"

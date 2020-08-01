@@ -1,9 +1,7 @@
-sw_volume: 68
+sw_volume: 54
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
-state: pause
-current: 21
-time: 75.334000
+state: stop
 random: 0
 repeat: 0
 single: 0
@@ -12,44 +10,15 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Mac Miller/GO_OD AM/Doors.flac
-1:Mac Miller/GO_OD AM/Brand Name.flac
-2:Mac Miller/GO_OD AM/Rush Hour.flac
-3:Mac Miller/GO_OD AM/Two Matches feat. Ab-Soul.flac
-4:Mac Miller/GO_OD AM/100 Grandkids.flac
-5:Mac Miller/GO_OD AM/Time Flies feat. Lil B.flac
-6:Mac Miller/GO_OD AM/Weekend feat. Miguel.flac
-7:Mac Miller/GO_OD AM/Clubhouse.flac
-8:Mac Miller/GO_OD AM/In the Bag.flac
-9:Mac Miller/GO_OD AM/Break the Law.flac
-10:Mac Miller/GO_OD AM/Perfect Circle _ God Speed.flac
-11:Mac Miller/GO_OD AM/When in Rome.flac
-12:Mac Miller/GO_OD AM/ROS.flac
-13:Mac Miller/GO_OD AM/Cut the Check feat. Chief Keef.flac
-14:Mac Miller/GO_OD AM/Ascension.flac
-15:Mac Miller/GO_OD AM/Jump.flac
-16:Mac Miller/GO_OD AM/The Festival feat. Little Dragon.flac
-17:Mac Miller/Swimming/Come Back to Earth.flac
-18:Mac Miller/Swimming/Hurt Feelings.flac
-19:Mac Miller/Swimming/What’s the Use_.flac
-20:Mac Miller/Swimming/Perfecto.flac
-21:Mac Miller/Swimming/Self Care.flac
-22:Mac Miller/Swimming/Wings.flac
-23:Mac Miller/Swimming/Ladders.flac
-24:Mac Miller/Swimming/Small Worlds.flac
-25:Mac Miller/Swimming/Conversation, Pt. 1.flac
-26:Mac Miller/Swimming/Dunno.flac
-27:Mac Miller/Swimming/Jet Fuel.flac
-28:Mac Miller/Swimming/2009.flac
-29:Mac Miller/Swimming/So It Goes.flac
-30:Mac Miller/The Divine Feminine/Congratulations feat. Bilal.flac
-31:Mac Miller/The Divine Feminine/Dang! feat. Anderson .Paak.flac
-32:Mac Miller/The Divine Feminine/Stay.flac
-33:Mac Miller/The Divine Feminine/Skin.flac
-34:Mac Miller/The Divine Feminine/Cinderella feat. Ty Dolla $ign.flac
-35:Mac Miller/The Divine Feminine/Planet God Damn feat. Njomza.flac
-36:Mac Miller/The Divine Feminine/Soulmate.flac
-37:Mac Miller/The Divine Feminine/We feat. CeeLo Green.flac
-38:Mac Miller/The Divine Feminine/My Favorite Part feat. Ariana Grande.flac
-39:Mac Miller/The Divine Feminine/God Is Fair, Sexy, Nasty feat. Kendrick Lamar.flac
+0:Ka/Descendants of Cain/Every Now and Then.flac
+1:Ka/Descendants of Cain/Unto the Dust.flac
+2:Ka/Descendants of Cain/Patron Saints.flac
+3:Ka/Descendants of Cain/My Brother's Keeper.flac
+4:Ka/Descendants of Cain/Solitude of Enoch.flac
+5:Ka/Descendants of Cain/The Eye of a Needle.flac
+6:Ka/Descendants of Cain/P.R.A.Y.flac
+7:Ka/Descendants of Cain/Land of Nod.flac
+8:Ka/Descendants of Cain/Sins of the Father.flac
+9:Ka/Descendants of Cain/Old Justice.flac
+10:Ka/Descendants of Cain/I Love (Mimi, Moms, Kev).flac
 playlist_end

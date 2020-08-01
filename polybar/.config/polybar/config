@@ -1,96 +1,189 @@
-# vim: ft=cfg
+
 [colors]
-bg = #020003
-fg = ${xrdb:color7:#777}
-icon = ${xrdb:color4:#777}
-border = #f7f7f7
+blk = ${xrdb:color0}
+bblk =${xrdb:color8}
+red = ${xrdb:color1}
+grn = ${xrdb:color2}
+blu = ${xrdb:color4}
+pur = ${xrdb:color5}
+cyn = ${xrdb:color6}
+wht = ${xrdb:color7}
+
 
 [bar/top]
-monitor = HDMI-A-0
+monitor = HDMI-0
 bottom = false
-background = ${colors.bg}
-foreground = ${colors.fg}
-border-bottom-size = 5
-border-bottom-color = ${colors.border}
-padding-left = 3
-padding-right =4
-height = 35
-module-margin-left = 1
-module-margin-right = 1
+#background = ${colors.blk}
+background = #000000
+foreground = ${colors.wht}
+width = 100%
+height = 30
+fixed-center = true
+module-margin = 3
+font-0 =M+ 1m:pixelsize=9;2
+font-1 = "Wuncon Siji:size=12;2"
 
-font-0 = Victor Mono:Italic:pixelsize=12:antialias=true:autohint=true;2
-#font-0 = Code Saver:pixelsize=10:antialias=true:autohint=true;2
-font-1 = Material Icons:size=14;5
-
-modules-left =  mpd
-modules-center = 2bwm
-modules-right =  pulse screenshot logout
+modules-left =  bspwm wired-network temp title
+modules-center = clock
+modules-right =  screenshot mpd pulseaudio weather
 
 [bar/bottom]
-
-monitor = HDMI-A-0
+monitor = HDMI-0
 bottom = true
-background = ${colors.bg}
-foreground = ${colors.fg}
-border-top-size = 5
-border-top-color = ${colors.border}
-
-padding-left = 3
-padding-right =4
-height = 35
-module-margin-left = 1
-module-margin-right = 1
-
-font-0 = Victor Mono:Italic:pixelsize=12:antialias=true:autohint=true;2
-#font-0 = Code Saver:pixelsize=12:antialias=true:autohint=true;2
-font-1 = Material Icons:size=12;2
-font-2 = Weather Icons:size=12;2
+#background = ${colors.blk}
+foreground = ${colors.wht}
+width = 100%
+height = 30
+fixed-center = true
+module-margin = 3
+font-0 =M+ 1m:pixelsize=9;2
 
 modules-left = pi
-modules-center = date
-modules-right = weather
+modules-center = rss
+modules-right = covid 
 
+[module/covid]
+type = custom/script
+exec = /home/hippi/.bin/covid.py
+interval = 90
+
+[module/rss]
+type = custom/script
+exec = /home/hippi/.bin/rss.py
+interval = 90
+
+[module/clock]
+type = custom/script
+exec = /home/hippi/.bin/date.sh
+interval = 5
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+
+; Output mode flags after focused state label
+; Default: false
+inline-mode = false
+
+; Create click handler used to focus workspace
+; Default: true
+enable-click = true
+
+; Create scroll handlers used to cycle workspaces
+; Default: true
+enable-scroll = false
+
+; Set the scroll cycle direction 
+; Default: true
+reverse-scroll = false
+
+; Use fuzzy (partial) matching on labels when assigning 
+; icons to workspaces
+; Example: code;♚ will apply the icon to all workspaces 
+; containing 'code' in the label
+; Default: false
+fuzzy-match = true
+format = <label-state>
+label-focused-foreground = ${colors.red}
+
+[module/wired-network]
+type = internal/network
+interface = enp6s0
+interval = 3.0
+format-connected = <label-connected>   
+format-disconnected = <label-disconnected>
+format-connected-prefix =NET
+label-connected = %{F#885152}%downspeed:7% %upspeed%  %{F-}    
+label-connected-foreground = ${colors.wht}
+label-disconnected = NOT CONNECTED
+label-disconnected-foreground = ${colors.wht}
+label-disconnected-background = ${colors.red}
+format-connected-prefix-padding=1
+label-connected-padding=0
+label-font = 0
+
+[module/temp]
+type = custom/script
+interval = 1.0
+exec = cat /sys/class/thermal/thermal_zone0/temp | awk '{print $1/1000}'   
+format=<label>
+label = %{F#885152}%output%°C %{F-}
+label-padding = 1
+format-prefix = TEMP
+format-foreground = ${colors.wht}
+format-prefix-padding=1
+format-exec-padding=1
+label-font = 0
+
+[module/title]
+type = internal/xwindow
+format = <label>
+format-foreground = ${colors.wht}
+format-padding = 4
+
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 50
+
+; Used instead of label when there is no window title
+; Available tokens:
+;   None
+label-empty = Empty
+label-empty-foreground = #707880
 
 [module/2bwm]
 type = custom/script
-exec = ~/.bin/2bws.sh
-interval = 0.5
-format-prefix =
-format-padding = 1
-format-background = ${colors.bg}
-format-foreground = ${colors.fg}
-label-font = 0
-
+exec = .bin/2bws.sh
 
 [module/mpd]
 type = internal/mpd
-
 host = 127.0.0.1
 port = 6600
 interval = 1
-format-online = <icon-prev><icon-play><icon-pause><icon-next><label-song>
-#content  = <label-icon> <label-song>
-icon-prev-foreground = ${xrdb:color4:#777}
-icon-play-foreground = ${xrdb:color1:#777}
-icon-pause-foreground = ${xrdb:color1:#777}
-icon-next-foreground = ${xrdb:color3:#777}
-label-song = %artist% : %title%
-label-song-padding = 1
-label-font = 1
+format-online = <label-song> <icon-prev> <toggle> <icon-next> 
+format-online-padding= 1
+label-song =%artist% : %{F#DFA349} %title% %{F-}
+label-song-padding = 2
+format-online-font = 1
 format-stopped  =  No songs playing
 format-offline = <label-offline>
 label-offline =  mpd is offline
-icon-play = 
-icon-pause = 
-icon-stop = ⏹
-icon-prev = 
-icon-next = 
+icon-play= PLAY
+icon-pause = PAUSE
+icon-stop = STOP
+icon-prev = PREV
+icon-next = NEXT
+icon-play-foreground = ${colors.red}
+icon-pause-foreground = ${colors.red}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink=alsa_output.usb-Burr-Brown_from_TI_USB_Audio_DAC-00.analog-stereo
+use-ui-max = true
+interval = 5
+format-volume = <label-volume>
+label-volume-foreground = ${colors.red}
+format-volume-prefix=VOL
+format-volume-prefix-padding=1
+format-muted = <label-muted>
+label-muted = 🔇 muted
+label-volume = %percentage%%
+label-volume-padding=1
+click-right = pavucontrol &
+
 
 [module/date]
 type = custom/script
-exec = ~/.bin/date.sh
+exec = date +'%R'
+format=<label>
+label= %output%
+format-prefix = TIME
+format-prefix-padding= 1
+label-padding=1
 interval = 1.0
-format-foreground = ${xrdb:color7:#777}
 label-font = 0
 
 [module/pulse]
@@ -118,27 +211,23 @@ content = Screenshot
 content-foreground = ${colors.fg}
 content-background = ${colors.bg}
 #content-padding = 1
-click-left = scrot -q 100 -e 'mv $f ~/Images/shots/' && notify-send 'Polybar' 'Screenshot taken'
+click-left = scrot -q 100 -e 'mv $f ~/tmp' && notify-send 'Polybar' 'Screenshot taken'
 label-font = 0
 
 [module/logout]
 type = custom/text
-content =  Logout
+content =  Logout 
 content-foreground = ${xrdb:color3:#777}
 content-background = ${colors.bg}
 #content-padding = 1
 click-left = notify-send 'Polybar' 'Loggin out in 5 seconds' --icon=dialog-information && sleep 5 && pkill x
 label-font = 0
-
+#content-underline = #924400
+#content-overline = #924400
 [module/pi]
 type = custom/script
 exec = ~/.bin/pi.sh
 interval = 0.5
-content = 
-format-content-padding = 1
-format-background = ${colors.bg}
-format-content-foreground = #f7f7f7
-format-content-overline = #FFDDDD
 
 [module/weather]
 type              = custom/script
